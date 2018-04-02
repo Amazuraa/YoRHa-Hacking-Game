@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=1]
+
+[ext_resource path="res://scripts/enemy_type_0C.gd" type="Script" id=1]
+[ext_resource path="res://scenes/core_hit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/sfx/sfx_enemy_core_explode.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/sfx/sfx_enemy_core_hit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/sfx/sfx_enemy_shoot.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sprites/enemy_type2.png" type="Texture" id=6]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 58.0178
+
+[node name="enemy_0C" type="KinematicBody2D"]
+
+z/z = 1
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+MOTION_SPEED = 15
+delay = 0.08
+switch_bullet = 1
+rotating_speed = 200.0
+total_health = 70
+hit_tscn = ExtResource( 2 )
+sfx_tscn_e = ExtResource( 3 )
+sfx_tscn_h = ExtResource( 4 )
+sfx_tscn_s = ExtResource( 5 )
+
+[node name="sprite" type="Sprite" parent="."]
+
+transform/scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 6 )
+modulate = Color( 0.96875, 0.96875, 0.96875, 1 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="muzzle1" type="Position2D" parent="."]
+
+transform/pos = Vector2( -100, 0 )
+
+[node name="muzzle2" type="Position2D" parent="."]
+
+transform/pos = Vector2( -100, 0 )
+
+[node name="muzzle3" type="Position2D" parent="."]
+
+transform/pos = Vector2( -100, 0 )
+
+[node name="muzzle4" type="Position2D" parent="."]
+
+transform/pos = Vector2( -100, 0 )
+
+[node name="bullet_container" type="Node" parent="."]
+
+[node name="sfx_container" type="Node" parent="."]
+
+[node name="notifier" type="VisibilityNotifier2D" parent="."]
+
+rect = Rect2( -10, -10, 20, 20 )
+
+[connection signal="enter_screen" from="notifier" to="." method="_on_notifier_enter_screen"]
+
+[connection signal="exit_screen" from="notifier" to="." method="_on_notifier_exit_screen"]
+
+

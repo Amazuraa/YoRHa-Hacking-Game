@@ -1,0 +1,541 @@
+[gd_scene load_steps=37 format=1]
+
+[ext_resource path="res://scripts/gui/death_gui_delete.gd" type="Script" id=1]
+[ext_resource path="res://sprites/bg1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/decoration2.png" type="Texture" id=3]
+[ext_resource path="res://sprites/decoration3.png" type="Texture" id=4]
+[ext_resource path="res://sprites/decoration4.png" type="Texture" id=5]
+[ext_resource path="res://sprites/decoration1.png" type="Texture" id=6]
+[ext_resource path="res://sprites/decoration5.png" type="Texture" id=7]
+[ext_resource path="res://sprites/button1/button_00000.png" type="Texture" id=8]
+[ext_resource path="res://sprites/button1/button_00001.png" type="Texture" id=9]
+[ext_resource path="res://sprites/button1/button_00002.png" type="Texture" id=10]
+[ext_resource path="res://sprites/button1/button_00003.png" type="Texture" id=11]
+[ext_resource path="res://sprites/button1/button_00004.png" type="Texture" id=12]
+[ext_resource path="res://sprites/button1/button_00005.png" type="Texture" id=13]
+[ext_resource path="res://sprites/button1/button_00006.png" type="Texture" id=14]
+[ext_resource path="res://sprites/button1/button_00007.png" type="Texture" id=15]
+[ext_resource path="res://sprites/button1/button_00008.png" type="Texture" id=16]
+[ext_resource path="res://sprites/button1/button_00009.png" type="Texture" id=17]
+[ext_resource path="res://sprites/button1/button_00010.png" type="Texture" id=18]
+[ext_resource path="res://sprites/button1/button_00011.png" type="Texture" id=19]
+[ext_resource path="res://sprites/button1/button_00012.png" type="Texture" id=20]
+[ext_resource path="res://sprites/button1/button_00013.png" type="Texture" id=21]
+[ext_resource path="res://sprites/button1/button_00014.png" type="Texture" id=22]
+[ext_resource path="res://sprites/button1/button_00015.png" type="Texture" id=23]
+[ext_resource path="res://sprites/button1/button_00016.png" type="Texture" id=24]
+[ext_resource path="res://sprites/button1/button_00017.png" type="Texture" id=25]
+[ext_resource path="res://sprites/button1/button_00018.png" type="Texture" id=26]
+[ext_resource path="res://sprites/button1/button_00019.png" type="Texture" id=27]
+[ext_resource path="res://fonts/calibri_small.fnt" type="BitmapFont" id=28]
+[ext_resource path="res://sprites/pointer.png" type="Texture" id=29]
+[ext_resource path="res://fonts/calibri_credit.fnt" type="BitmapFont" id=30]
+[ext_resource path="res://sprites/decoration6.png" type="Texture" id=31]
+[ext_resource path="res://sound/sfx/button_enter.wav" type="Sample" id=32]
+[ext_resource path="res://sound/sfx/button_select.wav" type="Sample" id=33]
+[ext_resource path="res://sound/sfx/type.wav" type="Sample" id=34]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ { "frames":[ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ], "loop":false, "name":"selected", "speed":90.0 }, { "frames":[ ExtResource( 27 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ) ], "loop":false, "name":"reverse", "speed":90.0 } ]
+
+[sub_resource type="SampleLibrary" id=2]
+
+samples/button_enter = { "db":2.0, "pitch":1.0, "sample":ExtResource( 32 ) }
+samples/button_select = { "db":2.0, "pitch":1.0, "sample":ExtResource( 33 ) }
+samples/type = { "db":0.0, "pitch":1.0, "sample":ExtResource( 34 ) }
+
+[node name="death_gui" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 2.0
+margin/right = 0.0
+margin/bottom = 2.0
+script/script = ExtResource( 1 )
+enter_delay = 10
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+editor/display_folded = true
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+
+transform/pos = Vector2( -14.0841, -21.1261 )
+transform/scale = Vector2( 33.0613, 28.6186 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( -1, -1 )
+__meta__ = { "_edit_lock_":true }
+
+[node name="dec1" type="Sprite" parent="CanvasLayer"]
+
+visibility/opacity = 0.7
+transform/pos = Vector2( 1044, 665 )
+texture = ExtResource( 3 )
+
+[node name="dec1_1" type="Sprite" parent="CanvasLayer"]
+
+visibility/opacity = 0.7
+transform/pos = Vector2( 1045, 670 )
+texture = ExtResource( 4 )
+
+[node name="dec1_2" type="Sprite" parent="CanvasLayer"]
+
+visibility/opacity = 0.5
+transform/pos = Vector2( 922, 535 )
+texture = ExtResource( 5 )
+
+[node name="dec1_3" type="Sprite" parent="CanvasLayer"]
+
+visibility/opacity = 0.5
+transform/pos = Vector2( 1020, 577 )
+texture = ExtResource( 5 )
+
+[node name="dec1_4" type="Sprite" parent="CanvasLayer"]
+
+visibility/opacity = 0.5
+transform/pos = Vector2( 933, 565 )
+texture = ExtResource( 5 )
+
+[node name="dec2" type="Sprite" parent="CanvasLayer"]
+
+visibility/opacity = 0.6
+transform/pos = Vector2( -46, -10 )
+texture = ExtResource( 6 )
+
+[node name="dec2_1" type="Sprite" parent="CanvasLayer"]
+
+visibility/opacity = 0.6
+transform/pos = Vector2( -49, -12.9999 )
+transform/scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 6 )
+
+[node name="dec2_2" type="Sprite" parent="CanvasLayer"]
+
+visibility/opacity = 0.45
+transform/pos = Vector2( -7.99988, 63.0001 )
+texture = ExtResource( 5 )
+
+[node name="dec2_3" type="Sprite" parent="CanvasLayer"]
+
+visibility/opacity = 0.45
+transform/pos = Vector2( -73.9998, -2.99992 )
+texture = ExtResource( 5 )
+
+[node name="dec2_4" type="Sprite" parent="CanvasLayer"]
+
+visibility/opacity = 0.45
+transform/pos = Vector2( -24.9998, 5.00008 )
+texture = ExtResource( 5 )
+
+[node name="dec4" type="Sprite" parent="CanvasLayer"]
+
+visibility/opacity = 0.3
+transform/pos = Vector2( 57.0001, 564 )
+transform/scale = Vector2( 15, 1.05 )
+texture = ExtResource( 7 )
+centered = false
+modulate = Color( 0.550781, 0.550781, 0.550781, 1 )
+
+[node name="dec3" type="Sprite" parent="CanvasLayer"]
+
+visibility/opacity = 0.7
+transform/pos = Vector2( 61.0001, 561 )
+transform/scale = Vector2( 15, 1.05 )
+texture = ExtResource( 7 )
+centered = false
+modulate = Color( 0.9375, 0.9375, 0.9375, 1 )
+
+[node name="button_yes" type="Control" parent="CanvasLayer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="button" type="AnimatedSprite" parent="CanvasLayer/button_yes"]
+
+transform/pos = Vector2( 1014.77, 604.299 )
+transform/scale = Vector2( 0.9, 1 )
+frames = SubResource( 1 )
+animation = "reverse"
+
+[node name="text" type="Label" parent="CanvasLayer/button_yes"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 1117.0
+margin/top = 593.0
+margin/right = 1235.0
+margin/bottom = 669.0
+custom_fonts/font = ExtResource( 28 )
+custom_colors/font_color = Color( 0.75, 0.75, 0.75, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+text = "Yes"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button_no" type="Control" parent="CanvasLayer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = -6.0
+margin/right = 40.0
+margin/bottom = 34.0
+
+[node name="button" type="AnimatedSprite" parent="CanvasLayer/button_no"]
+
+transform/pos = Vector2( 1014.77, 654.299 )
+transform/scale = Vector2( 0.9, 1 )
+frames = SubResource( 1 )
+animation = "selected"
+
+[node name="text" type="Label" parent="CanvasLayer/button_no"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 1117.0
+margin/top = 645.0
+margin/right = 1235.0
+margin/bottom = 721.0
+custom_fonts/font = ExtResource( 28 )
+custom_colors/font_color = Color( 0.333333, 0.317647, 0.282353, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+text = "No"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="arrow" type="Sprite" parent="CanvasLayer"]
+
+transform/pos = Vector2( 809.5, 606 )
+texture = ExtResource( 29 )
+
+[node name="text_container" type="Control" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -274.0
+margin/top = 130.0
+margin/right = -234.0
+margin/bottom = 170.0
+
+[node name="text1" type="Label" parent="text_container"]
+
+editor/display_folded = true
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 177.0
+margin/top = 619.0
+margin/right = 940.0
+margin/bottom = 758.0
+custom_fonts/font = ExtResource( 30 )
+custom_colors/font_color = Color( 0.333333, 0.317647, 0.282353, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "Are you give up here \?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="text_container/text1"]
+
+transform/pos = Vector2( -36.25, 21.25 )
+texture = ExtResource( 31 )
+
+[node name="text2" type="Label" parent="text_container"]
+
+editor/display_folded = true
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 177.0
+margin/top = 619.0
+margin/right = 940.0
+margin/bottom = 758.0
+custom_fonts/font = ExtResource( 30 )
+custom_colors/font_color = Color( 0.333333, 0.317647, 0.282353, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "Is this level to hard for you\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="text_container/text2"]
+
+transform/pos = Vector2( -36.25, 21.25 )
+texture = ExtResource( 31 )
+
+[node name="text3" type="Label" parent="text_container"]
+
+editor/display_folded = true
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 177.0
+margin/top = 619.0
+margin/right = 940.0
+margin/bottom = 758.0
+custom_fonts/font = ExtResource( 30 )
+custom_colors/font_color = Color( 0.333333, 0.317647, 0.282353, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "Do you admit to lose\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="text_container/text3"]
+
+transform/pos = Vector2( -36.25, 21.25 )
+texture = ExtResource( 31 )
+
+[node name="text4" type="Label" parent="text_container"]
+
+editor/display_folded = true
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 154.0
+margin/top = 619.0
+margin/right = 917.0
+margin/bottom = 758.0
+custom_fonts/font = ExtResource( 30 )
+custom_colors/font_color = Color( 0.333333, 0.317647, 0.282353, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "Give up in this meaningless battle\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="text_container/text4"]
+
+transform/pos = Vector2( -36.25, 21.25 )
+texture = ExtResource( 31 )
+
+[node name="text5" type="Label" parent="text_container"]
+
+editor/display_folded = true
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 177.0
+margin/top = 619.0
+margin/right = 940.0
+margin/bottom = 758.0
+custom_fonts/font = ExtResource( 30 )
+custom_colors/font_color = Color( 0.333333, 0.317647, 0.282353, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "Do you accept defeat\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="text_container/text5"]
+
+transform/pos = Vector2( -36.25, 21.25 )
+texture = ExtResource( 31 )
+
+[node name="text6" type="Label" parent="text_container"]
+
+editor/display_folded = true
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 150.0
+margin/top = 619.0
+margin/right = 913.0
+margin/bottom = 758.0
+custom_fonts/font = ExtResource( 30 )
+custom_colors/font_color = Color( 0.333333, 0.317647, 0.282353, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "Do you think you can win this game\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="text_container/text6"]
+
+transform/pos = Vector2( -36.25, 21.25 )
+texture = ExtResource( 31 )
+
+[node name="text7" type="Label" parent="text_container"]
+
+editor/display_folded = true
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 177.0
+margin/top = 619.0
+margin/right = 940.0
+margin/bottom = 758.0
+custom_fonts/font = ExtResource( 30 )
+custom_colors/font_color = Color( 0.333333, 0.317647, 0.282353, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "Still want to continue\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="text_container/text7"]
+
+transform/pos = Vector2( -36.25, 21.25 )
+texture = ExtResource( 31 )
+
+[node name="text8" type="Label" parent="text_container"]
+
+editor/display_folded = true
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 154.0
+margin/top = 599.0
+margin/right = 917.0
+margin/bottom = 738.0
+custom_fonts/font = ExtResource( 30 )
+custom_colors/font_color = Color( 0.333333, 0.317647, 0.282353, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "Don\'t you think the enemies are\nStrong enough for you\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="text_container/text8"]
+
+transform/pos = Vector2( -36.25, 21.25 )
+texture = ExtResource( 31 )
+
+[node name="sample_player" type="SamplePlayer" parent="."]
+
+config/polyphony = 1
+config/samples = SubResource( 2 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
+
+[node name="sample_player_type" type="SamplePlayer" parent="."]
+
+config/polyphony = 1
+config/samples = SubResource( 2 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
+
+[node name="camera" type="Camera2D" parent="."]
+
+transform/pos = Vector2( 600, 360 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1.59, 1.59 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+

@@ -1,0 +1,378 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://scripts/gui/hint.gd" type="Script" id=1]
+[ext_resource path="res://sprites/player.png" type="Texture" id=2]
+[ext_resource path="res://sprites/bg2.png" type="Texture" id=3]
+[ext_resource path="res://fonts/benguiatstd_ssmall.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://fonts/benguiatstd_med.fnt" type="BitmapFont" id=5]
+
+[node name="hint" type="Node2D"]
+
+script/script = ExtResource( 1 )
+delay_hide = 350
+player_parent = null
+
+[node name="Sprite" type="Sprite" parent="."]
+
+visibility/visible = false
+texture = ExtResource( 2 )
+
+[node name="bg1" type="Sprite" parent="."]
+
+transform/pos = Vector2( -281.803, -282.968 )
+transform/scale = Vector2( 9.54328, 8.66991 )
+texture = ExtResource( 3 )
+modulate = Color( 1, 1, 1, 0.39336 )
+
+[node name="bg2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 276.218, -282.968 )
+transform/scale = Vector2( 9.54328, 8.66991 )
+texture = ExtResource( 3 )
+modulate = Color( 1, 1, 1, 0.39336 )
+
+[node name="bg3" type="Sprite" parent="."]
+
+transform/pos = Vector2( -6.05869, 279.473 )
+transform/scale = Vector2( 12.8207, 8.66991 )
+texture = ExtResource( 3 )
+modulate = Color( 1, 1, 1, 0.39336 )
+
+[node name="button_move" type="Node2D" parent="."]
+
+transform/pos = Vector2( -312.712, -309.398 )
+
+[node name="button1" type="Sprite" parent="button_move"]
+
+transform/scale = Vector2( 1.7, 1.7 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="label" type="Label" parent="button_move/button1"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -21.0
+margin/top = 10.0
+margin/right = 79.0
+margin/bottom = 40.0
+custom_fonts/font = ExtResource( 4 )
+text = "W"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button2" type="Sprite" parent="button_move"]
+
+editor/display_folded = true
+transform/pos = Vector2( 0, 75 )
+transform/scale = Vector2( 1.7, 1.7 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="label" type="Label" parent="button_move/button2"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -21.0
+margin/top = 10.0
+margin/right = 79.0
+margin/bottom = 40.0
+custom_fonts/font = ExtResource( 4 )
+text = "S"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button3" type="Sprite" parent="button_move"]
+
+editor/display_folded = true
+transform/pos = Vector2( -75, 75 )
+transform/scale = Vector2( 1.7, 1.7 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="label" type="Label" parent="button_move/button3"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -21.0
+margin/top = 10.0
+margin/right = 79.0
+margin/bottom = 40.0
+custom_fonts/font = ExtResource( 4 )
+text = "A"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button4" type="Sprite" parent="button_move"]
+
+editor/display_folded = true
+transform/pos = Vector2( 75, 75 )
+transform/scale = Vector2( 1.7, 1.7 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="label" type="Label" parent="button_move/button4"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -21.0
+margin/top = 10.0
+margin/right = 79.0
+margin/bottom = 40.0
+custom_fonts/font = ExtResource( 4 )
+text = "D"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text" type="Label" parent="button_move"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -47.0
+margin/top = -84.0
+margin/right = 116.0
+margin/bottom = -11.0
+custom_fonts/font = ExtResource( 5 )
+text = "Move"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button_direction" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 246.685, -309.398 )
+
+[node name="button1" type="Sprite" parent="button_direction"]
+
+editor/display_folded = true
+transform/scale = Vector2( 1.7, 1.7 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="label" type="Label" parent="button_direction/button1"]
+
+rect/rotation = 90.0
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 7.0
+margin/top = 57.0
+margin/right = 107.0
+margin/bottom = 87.0
+custom_fonts/font = ExtResource( 4 )
+text = ">"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button2" type="Sprite" parent="button_direction"]
+
+editor/display_folded = true
+transform/pos = Vector2( 0, 75 )
+transform/scale = Vector2( 1.7, 1.7 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="label" type="Label" parent="button_direction/button2"]
+
+rect/rotation = 90.0
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 7.0
+margin/top = 60.0
+margin/right = 107.0
+margin/bottom = 90.0
+custom_fonts/font = ExtResource( 4 )
+text = "<"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button3" type="Sprite" parent="button_direction"]
+
+editor/display_folded = true
+transform/pos = Vector2( -75, 75 )
+transform/scale = Vector2( 1.7, 1.7 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="label" type="Label" parent="button_direction/button3"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -21.0
+margin/top = 10.0
+margin/right = 79.0
+margin/bottom = 40.0
+custom_fonts/font = ExtResource( 4 )
+text = "<"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button4" type="Sprite" parent="button_direction"]
+
+editor/display_folded = true
+transform/pos = Vector2( 75, 75 )
+transform/scale = Vector2( 1.7, 1.7 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="label" type="Label" parent="button_direction/button4"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -21.0
+margin/top = 10.0
+margin/right = 79.0
+margin/bottom = 40.0
+custom_fonts/font = ExtResource( 4 )
+text = ">"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text" type="Label" parent="button_direction"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -102.0
+margin/top = -84.0
+margin/right = 171.0
+margin/bottom = -11.0
+custom_fonts/font = ExtResource( 5 )
+text = "Direction"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button_shoot" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -32.0448, 181.219 )
+
+[node name="button1" type="Sprite" parent="button_shoot"]
+
+editor/display_folded = true
+transform/scale = Vector2( 1.7, 1.7 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Sprite" type="Sprite" parent="button_shoot/button1"]
+
+transform/pos = Vector2( -73.4495, 0 )
+transform/scale = Vector2( 5, 1 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="label" type="Label" parent="button_shoot/button1"]
+
+rect/scale = Vector2( 0.6, 0.6 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -11.0
+margin/top = 11.0
+margin/right = 89.0
+margin/bottom = 41.0
+custom_fonts/font = ExtResource( 4 )
+text = "Space"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button2" type="Sprite" parent="button_shoot"]
+
+editor/display_folded = true
+transform/pos = Vector2( 0, 75 )
+transform/scale = Vector2( 1.7, 1.7 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Sprite" type="Sprite" parent="button_shoot/button2"]
+
+transform/pos = Vector2( -36.3997, 0 )
+transform/scale = Vector2( 3, 1 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="label" type="Label" parent="button_shoot/button2"]
+
+rect/scale = Vector2( 0.6, 0.6 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -11.0
+margin/top = 11.0
+margin/right = 89.0
+margin/bottom = 41.0
+custom_fonts/font = ExtResource( 4 )
+text = "Shift"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text" type="Label" parent="button_shoot"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -102.0
+margin/top = 175.0
+margin/right = 171.0
+margin/bottom = 248.0
+custom_fonts/font = ExtResource( 5 )
+text = "Shoot"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+

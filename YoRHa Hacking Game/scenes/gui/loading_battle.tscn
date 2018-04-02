@@ -1,0 +1,537 @@
+[gd_scene load_steps=19 format=1]
+
+[ext_resource path="res://scripts/gui/loading/loading_battle.gd" type="Script" id=1]
+[ext_resource path="res://sprites/bg2.png" type="Texture" id=2]
+[ext_resource path="res://sprites/yorha_logo.png" type="Texture" id=3]
+[ext_resource path="res://fonts/loading_calibri.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://fonts/loading_small_calibri.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://fonts/loading_ssmall_calibri.fnt" type="BitmapFont" id=6]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "text10"
+length = 1.0
+loop = false
+step = 0.01
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0.25 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"text10_play" } ] }
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "text11"
+length = 1.0
+loop = false
+step = 0.01
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0.25 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"text11_play" } ] }
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "text12"
+length = 1.0
+loop = false
+step = 0.01
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0.25 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"text12_play" } ] }
+
+[sub_resource type="Animation" id=4]
+
+resource/name = "text13"
+length = 1.0
+loop = false
+step = 0.01
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0.25 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"text13_play" } ] }
+
+[sub_resource type="Animation" id=5]
+
+resource/name = "text14"
+length = 1.0
+loop = false
+step = 0.01
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0.25 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"text14_play" } ] }
+
+[sub_resource type="Animation" id=6]
+
+length = 1.0
+loop = false
+step = 0.01
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0.01 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"text3_play" } ] }
+
+[sub_resource type="Animation" id=7]
+
+length = 1.0
+loop = false
+step = 0.01
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0.24 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"text4_play" } ] }
+
+[sub_resource type="Animation" id=8]
+
+length = 1.0
+loop = false
+step = 0.01
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0.25 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"text5_play" } ] }
+
+[sub_resource type="Animation" id=9]
+
+length = 1.0
+loop = false
+step = 0.01
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0.25 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"text6_play" } ] }
+
+[sub_resource type="Animation" id=10]
+
+length = 1.0
+loop = false
+step = 0.01
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0.25 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"text7_play" } ] }
+
+[sub_resource type="Animation" id=11]
+
+length = 1.0
+loop = false
+step = 0.01
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0.25 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"text8_play" } ] }
+
+[sub_resource type="Animation" id=12]
+
+length = 1.0
+loop = false
+step = 0.01
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0.25 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"text9_play" } ] }
+
+[node name="loading" type="Node2D"]
+
+script/script = ExtResource( 1 )
+change_delay = 30
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="bg" type="Sprite" parent="CanvasLayer"]
+
+transform/pos = Vector2( -51.7322, -36.6436 )
+transform/scale = Vector2( 35.326, 21.5538 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="anim" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/text10 = SubResource( 1 )
+anims/text11 = SubResource( 2 )
+anims/text12 = SubResource( 3 )
+anims/text13 = SubResource( 4 )
+anims/text14 = SubResource( 5 )
+anims/text3 = SubResource( 6 )
+anims/text4 = SubResource( 7 )
+anims/text5 = SubResource( 8 )
+anims/text6 = SubResource( 9 )
+anims/text7 = SubResource( 10 )
+anims/text8 = SubResource( 11 )
+anims/text9 = SubResource( 12 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "text3"
+
+[node name="Sprite" type="Sprite" parent="."]
+
+visibility/opacity = 0.1
+visibility/self_opacity = 0.45
+transform/pos = Vector2( 600, 360 )
+transform/scale = Vector2( 1.38, 1.38 )
+texture = ExtResource( 3 )
+
+[node name="camera" type="Camera2D" parent="."]
+
+transform/pos = Vector2( 600, 360 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1.44, 1.44 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = true
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="Control" type="Control" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -205.0
+margin/top = -120.0
+margin/right = -165.0
+margin/bottom = -80.0
+
+[node name="text1" type="Label" parent="Control"]
+
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.95, 0.95 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -11.0
+margin/top = 0.0
+margin/right = 568.0
+margin/bottom = 75.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.800781, 0.80017, 0.785141, 1 )
+text = "HACKING SYSTEM"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text2" type="Label" parent="Control"]
+
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.95, 0.95 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 496.0
+margin/top = 27.0
+margin/right = 1088.0
+margin/bottom = 102.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.800781, 0.80017, 0.785141, 1 )
+text = "- CHECKING SYSTEM"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text2_dec" type="Label" parent="Control"]
+
+visibility/visible = false
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.95, 0.95 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 756.0
+margin/top = 27.0
+margin/right = 1348.0
+margin/bottom = 102.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.800781, 0.80017, 0.785141, 1 )
+text = ". . ."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text3" type="Label" parent="Control"]
+
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.99, 0.99 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 130.0
+margin/right = 792.0
+margin/bottom = 205.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.784314, 1 )
+text = "Authentication Code : YoRHa Type-A"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text4" type="Label" parent="Control"]
+
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.99, 0.99 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 169.0
+margin/right = 792.0
+margin/bottom = 244.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.784314, 1 )
+text = "Vitals : Green"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text5" type="Label" parent="Control"]
+
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.99, 0.99 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 207.0
+margin/right = 792.0
+margin/bottom = 282.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.784314, 1 )
+text = "Black Box Temperature : Normal"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text6" type="Label" parent="Control"]
+
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.99, 0.99 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 245.0
+margin/right = 792.0
+margin/bottom = 320.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.784314, 1 )
+text = "Remaining Energy : 100%"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text7" type="Label" parent="Control"]
+
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.99, 0.99 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 283.0
+margin/right = 792.0
+margin/bottom = 358.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.784314, 1 )
+text = "Loding Geographic Data"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text8" type="Label" parent="Control"]
+
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.99, 0.99 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 321.0
+margin/right = 792.0
+margin/bottom = 396.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.784314, 1 )
+text = "Target Acquired"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text9" type="Label" parent="Control"]
+
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.99, 0.99 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 359.0
+margin/right = 792.0
+margin/bottom = 434.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.784314, 1 )
+text = "Infiltration Route Lookup Complete"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text10" type="Label" parent="Control"]
+
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.99, 0.99 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 397.0
+margin/right = 792.0
+margin/bottom = 472.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.784314, 1 )
+text = "Activating IFF"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text11" type="Label" parent="Control"]
+
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.99, 0.99 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 435.0
+margin/right = 792.0
+margin/bottom = 510.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.784314, 1 )
+text = "Synchronizing Field of Vision"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text12" type="Label" parent="Control"]
+
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.99, 0.99 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 473.0
+margin/right = 792.0
+margin/bottom = 548.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.784314, 1 )
+text = "Nerves : Connected"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text13" type="Label" parent="Control"]
+
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.99, 0.99 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 511.0
+margin/right = 792.0
+margin/bottom = 586.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.784314, 1 )
+text = "Synchronizing Rate : 100%"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text14" type="Label" parent="Control"]
+
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.99, 0.99 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 549.0
+margin/right = 792.0
+margin/bottom = 624.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.784314, 1 )
+text = "System Checking Complete"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+

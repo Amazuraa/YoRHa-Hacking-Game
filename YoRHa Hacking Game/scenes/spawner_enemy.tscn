@@ -1,0 +1,57 @@
+[gd_scene load_steps=33 format=1]
+
+[ext_resource path="res://scripts/spawner_enemy.gd" type="Script" id=1]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00000.png" type="Texture" id=2]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00001.png" type="Texture" id=3]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00002.png" type="Texture" id=4]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00003.png" type="Texture" id=5]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00004.png" type="Texture" id=6]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00005.png" type="Texture" id=7]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00006.png" type="Texture" id=8]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00007.png" type="Texture" id=9]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00008.png" type="Texture" id=10]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00009.png" type="Texture" id=11]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00010.png" type="Texture" id=12]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00011.png" type="Texture" id=13]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00012.png" type="Texture" id=14]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00013.png" type="Texture" id=15]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00014.png" type="Texture" id=16]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00015.png" type="Texture" id=17]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00016.png" type="Texture" id=18]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00017.png" type="Texture" id=19]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00018.png" type="Texture" id=20]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00019.png" type="Texture" id=21]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00020.png" type="Texture" id=22]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00021.png" type="Texture" id=23]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00022.png" type="Texture" id=24]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00023.png" type="Texture" id=25]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00024.png" type="Texture" id=26]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00025.png" type="Texture" id=27]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00026.png" type="Texture" id=28]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00027.png" type="Texture" id=29]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00028.png" type="Texture" id=30]
+[ext_resource path="res://sprites/enemy_spawn/enemy_spawn_00029.png" type="Texture" id=31]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ], "loop":false, "name":"enemy_spawn", "speed":70.0 } ]
+
+[node name="spawner_enemy" type="Position2D"]
+
+script/script = ExtResource( 1 )
+object_tscn = null
+parent_path = null
+spawn = false
+delay = 0
+tower_spawn = false
+tower_double = false
+tower_degree = 0
+tower_degree1 = 0
+
+[node name="sprite" type="AnimatedSprite" parent="."]
+
+frames = SubResource( 1 )
+animation = "enemy_spawn"
+offset = Vector2( -4, -4 )
+
+

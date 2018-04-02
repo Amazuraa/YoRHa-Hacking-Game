@@ -1,0 +1,2130 @@
+[gd_scene load_steps=32 format=1]
+
+[ext_resource path="res://scripts/main_menu/main_menu.gd" type="Script" id=1]
+[ext_resource path="res://scenes/tile_scenes/floor_maps.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/player_spawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://fonts/calibri_big.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://scripts/main_menu/block_lvl2.gd" type="Script" id=5]
+[ext_resource path="res://scripts/main_menu/block_lvl3A.gd" type="Script" id=6]
+[ext_resource path="res://scripts/main_menu/block_lvl3B.gd" type="Script" id=7]
+[ext_resource path="res://scripts/main_menu/block_lvl3C.gd" type="Script" id=8]
+[ext_resource path="res://scenes/spawner.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scripts/block_spawner_main_menu/block_spawner.gd" type="Script" id=10]
+[ext_resource path="res://scenes/block_scenes/block_A_up.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/block_scenes/block_A_down.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/block_scenes/block_A_left.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/block_scenes/block_A_right.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/block_scenes/block_B_up.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/block_scenes/block_B_down.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/block_scenes/block_B_left.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/block_scenes/block_B_right.tscn" type="PackedScene" id=18]
+[ext_resource path="res://fonts/calibri.fnt" type="BitmapFont" id=19]
+[ext_resource path="res://fonts/calibri_small.fnt" type="BitmapFont" id=20]
+[ext_resource path="res://scenes/block_scenes/block_maps_A.tscn" type="PackedScene" id=21]
+[ext_resource path="res://levels/main_camera.gd" type="Script" id=22]
+[ext_resource path="res://scenes/scene_changer/scene_changer_mm.tscn" type="PackedScene" id=23]
+[ext_resource path="res://levels/main_camera_settings.gd" type="Script" id=24]
+[ext_resource path="res://scenes/gui/hint.tscn" type="PackedScene" id=25]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -416.854, -426.565, 429.379, -426.565, 429.379, 419.668, -416.854, 419.668 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 703.228, -1103.47, 979.717, -1103.47, 979.717, 102.416, 703.228, 102.416 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 691.971, 1002.59, 1001.37, 1002.59, 1001.37, 2306.48, 691.971, 2306.48 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 362.067, 418.731, 362.067, 697.189, -756.185, 697.189, -756.185, 418.731 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 2539.46, 412.755, 2539.46, 691.212, 1319.55, 691.212, 1319.55, 412.755 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 140.876, -352.28, 840.237, -352.28, 840.237, 355.26, 140.876, 355.26 )
+
+[node name="main_menu" type="Node2D"]
+
+script/script = ExtResource( 1 )
+lvl1_info1 = NodePath("level1_text/info1")
+lvl1_info2 = NodePath("level1_text/info2")
+lvl2_info_base = NodePath("level2_text/info_base")
+lvl2_infoA = NodePath("level2_text/info_A")
+lvl2_infoB = NodePath("level2_text/info_B")
+lvl2_infoAB = NodePath("level2_text/info_AB")
+lvl3A_info1 = NodePath("level3_A_text/info_base")
+lvl3A_info2 = NodePath("level3_A_text/info1")
+lvl3B_info1 = NodePath("level3_B_text/info_base")
+lvl3B_info2 = NodePath("level3_B_text/info_1")
+lvl3C_info1 = NodePath("level3_C_text/info_base")
+lvl3C_info2 = NodePath("level3_C_text/info1")
+lvl3A_floor = NodePath("floor_connector_A")
+lvl3B_floor = NodePath("floor_connector_B")
+lvl3C_floor = NodePath("floor_connector_C")
+
+[node name="floor" parent="." instance=ExtResource( 2 )]
+
+tile_data = IntArray( -3276805, -1610612733, -3276804, -1073741821, -3276803, -1610612734, -3342334, 2, -3342333, 3, -3342332, 1610612739, -3211269, -1073741821, -3276796, 3, -3145733, -1073741822, -3145731, 2, -3145730, -1610612735, -3145729, -1610612735, -3211264, -1610612735, -3211263, -1610612735, -3211262, -1610612734, -3211260, 1610612738, -3080195, 1, -3080194, 0, -3080193, 0, -3145728, 0, -3145727, 0, -3145726, 1610612737, -3014661, -1610612735, -3014660, -1610612735, -3014659, 0, -3014658, 0, -3014657, 0, -3080192, 0, -3080191, 0, -3080190, 0, -3080189, -1610612735, -3080188, -1610612735, -2949125, -1073741823, -2949124, -1073741823, -2949123, 0, -2949122, 0, -2949121, 0, -3014656, 0, -3014655, 0, -3014654, 0, -3014653, -1073741823, -3014652, -1073741823, -2883587, 1, -2883586, 0, -2883585, 0, -2949120, 0, -2949119, 0, -2949118, 1610612737, -2818053, 2, -2818051, -1073741822, -2818050, -1073741823, -2818049, 0, -2883584, 0, -2883583, -1073741823, -2883582, 1610612738, -2883580, -1610612734, -2752517, 1610612739, -2752513, 1, -2818048, 1610612737, -2818044, -1610612733, -2686981, 3, -2686980, 1610612739, -2686979, 1610612738, -2686977, 1, -2752512, 1610612737, -2752510, -1073741822, -2752509, -1610612733, -2752508, -1073741821, -2424857, 2, -2424856, -1610612735, -2424855, -1610612735, -2424854, 3, -2424849, -1073741821, -2424848, -1610612735, -2424847, -1610612735, -2424846, -1610612734, -2424838, -1073741821, -2424837, -1610612735, -2424836, -1610612735, -2424835, -1610612734, -2490366, 2, -2490365, -1610612735, -2490364, -1610612735, -2490363, 3, -2490355, 2, -2490354, 3, -2490353, 1610612739, -2490352, 1610612738, -2490347, -1073741822, -2490346, -1610612733, -2490345, -1073741821, -2490344, -1610612734, -2359321, 1, -2359320, -1610612733, -2359311, 1610612739, -2359310, 1610612737, -2359302, 1, -2424827, 1610612737, -2424819, 1610612739, -2424808, -1610612733, -2293785, 1, -2293783, 2, -2293782, -1610612735, -2293781, -1610612735, -2293780, 1610612736, -2293779, 1610612736, -2293778, -1610612735, -2293777, -1610612735, -2293776, -1610612734, -2293774, 1610612737, -2293766, 1, -2293764, 2, -2293763, -1610612735, -2293762, -1610612735, -2293761, 0, -2359296, 0, -2359295, -1610612735, -2359294, -1610612735, -2359293, -1610612734, -2359291, 1610612737, -2359283, 3, -2359281, 2, -2359280, -1610612735, -2359279, -1610612735, -2359278, 0, -2359277, 0, -2359276, -1610612735, -2359275, -1610612735, -2359274, -1610612734, -2359272, -1073741821, -2228249, 1610612739, -2228247, 1, -2228246, 1610612736, -2228245, 1610612736, -2228244, 1610612736, -2228243, 1610612736, -2228242, 1610612736, -2228241, 1610612736, -2228240, 1610612737, -2228238, -1610612733, -2228230, -1073741822, -2228228, 1, -2228227, 0, -2228226, 0, -2228225, 0, -2293760, 0, -2293759, 0, -2293758, 0, -2293757, 1610612737, -2293755, 1610612738, -2293747, 1610612738, -2293745, 1, -2293744, 1610612736, -2293743, 1610612736, -2293742, 1610612736, -2293741, 1610612736, -2293740, 1610612736, -2293739, 0, -2293738, 1610612737, -2293736, -1073741822, -2162711, 1, -2162710, 1610612736, -2162709, 1610612736, -2162708, 0, -2162707, 0, -2162706, 0, -2162705, 0, -2162704, 1610612737, -2162692, 1, -2162691, 0, -2162690, 0, -2162689, 0, -2228224, 0, -2228223, 0, -2228222, 0, -2228221, 1610612737, -2228209, 1, -2228208, 0, -2228207, 0, -2228206, 0, -2228205, 0, -2228204, 1610612736, -2228203, 0, -2228202, 1610612737, -2097175, 1, -2097174, 1610612736, -2097173, 1610612736, -2097172, 0, -2097171, 0, -2097170, 0, -2097169, 0, -2097168, 0, -2097167, -1610612735, -2097166, -1610612735, -2097156, 0, -2097155, 0, -2097154, 0, -2097153, 0, -2162688, 0, -2162687, 0, -2162686, 0, -2162685, 0, -2162675, -1610612735, -2162674, -1610612735, -2162673, 0, -2162672, 0, -2162671, 0, -2162670, 0, -2162669, 0, -2162668, 1610612736, -2162667, 1610612736, -2162666, 1610612737, -2031639, 1, -2031638, 1610612736, -2031637, 1610612736, -2031636, 0, -2031635, 0, -2031634, 0, -2031633, 0, -2031632, 0, -2031631, -1073741823, -2031630, -1073741823, -2031620, 0, -2031619, 0, -2031618, 0, -2031617, 0, -2097152, 0, -2097151, 0, -2097150, 0, -2097149, 0, -2097139, -1073741823, -2097138, -1073741823, -2097137, 0, -2097136, 0, -2097135, 0, -2097134, 0, -2097133, 0, -2097132, 1610612736, -2097131, 1610612736, -2097130, 1610612737, -1966103, 1, -1966102, 1610612736, -1966101, 1610612736, -1966100, 0, -1966099, 0, -1966098, 0, -1966097, 0, -1966096, 1610612737, -1966084, 1, -1966083, 0, -1966082, 0, -1966081, 0, -2031616, 0, -2031615, 0, -2031614, 0, -2031613, 1610612737, -2031601, 1, -2031600, 0, -2031599, 0, -2031598, 0, -2031597, 0, -2031596, 1610612736, -2031595, 1610612736, -2031594, 1610612737, -1900569, -1073741821, -1900567, 1, -1900566, 1610612736, -1900565, 1610612736, -1900564, 1610612736, -1900563, 1610612736, -1900562, 1610612736, -1900561, 1610612736, -1900560, 1610612737, -1900558, 3, -1900550, 2, -1900548, 1, -1900547, 0, -1900546, 0, -1900545, 0, -1966080, 0, -1966079, 0, -1966078, 0, -1966077, 1610612737, -1966075, -1610612734, -1966067, -1610612734, -1966065, 1, -1966064, 1610612736, -1966063, 1610612736, -1966062, 1610612736, -1966061, 1610612736, -1966060, 1610612736, -1966059, 1610612736, -1966058, 1610612737, -1966056, 2, -1835033, 1, -1835031, -1073741822, -1835030, -1073741823, -1835029, -1073741823, -1835028, -1073741823, -1835027, -1073741823, -1835026, -1073741823, -1835025, -1073741823, -1835024, 1610612738, -1835022, 1610612737, -1835014, 1, -1835012, -1073741822, -1835011, -1073741823, -1835010, -1073741823, -1835009, 0, -1900544, 0, -1900543, -1073741823, -1900542, -1073741823, -1900541, 1610612738, -1900539, 1610612737, -1900531, -1610612733, -1900529, -1073741822, -1900528, -1073741823, -1900527, -1073741823, -1900526, -1073741823, -1900525, -1073741823, -1900524, -1073741823, -1900523, -1073741823, -1900522, 1610612738, -1900520, 1610612739, -1769497, 1, -1769496, 3, -1769487, -1073741821, -1769486, 1610612737, -1769478, 1, -1769473, 1, -1835008, 1610612737, -1835003, 1610612737, -1834995, -1073741821, -1834984, 3, -1703961, -1073741822, -1703960, -1073741823, -1703959, -1073741823, -1703958, -1610612733, -1703953, 1610612739, -1703952, -1073741823, -1703951, -1073741823, -1703950, 1610612738, -1703942, 1610612739, -1703941, -1073741823, -1703940, -1073741823, -1703939, 1610612738, -1703937, 1, -1769472, 1610612737, -1769470, -1073741822, -1769469, -1073741823, -1769468, -1073741823, -1769467, -1610612733, -1769459, -1073741822, -1769458, -1610612733, -1769457, -1073741821, -1769456, -1610612734, -1769451, 2, -1769450, 3, -1769449, 1610612739, -1769448, 1610612738, -1638401, 1, -1703936, 1610612737, -1572869, -1610612733, -1572868, 1610612739, -1572867, -1073741823, -1572865, 1, -1638400, 1610612737, -1638398, -1073741823, -1638397, -1610612733, -1638396, 1610612739, -1507333, 3, -1507329, 1, -1572864, 1610612737, -1572860, -1073741821, -1441797, 1610612737, -1441795, 2, -1441794, -1610612735, -1441793, 0, -1507328, 0, -1507327, -1610612735, -1507326, -1610612734, -1507324, 1, -1376261, 1610612737, -1376259, 1, -1376258, 0, -1376257, 0, -1441792, 0, -1441791, 0, -1441790, 1610612737, -1441788, 1, -1310725, 1610612737, -1310723, 1, -1310722, 0, -1310721, 0, -1376256, 0, -1376255, 0, -1376254, 1610612737, -1376252, 1, -1245189, 1610612737, -1245187, 1, -1245186, 0, -1245185, 0, -1310720, 0, -1310719, 0, -1310718, 1610612737, -1310716, 1, -1179653, 1610612737, -1179651, 1, -1179650, 0, -1179649, 0, -1245184, 0, -1245183, 0, -1245182, 1610612737, -1245180, 1, -1114117, 1610612737, -1114115, -1073741822, -1114114, -1073741823, -1114113, 0, -1179648, 0, -1179647, -1073741823, -1179646, 1610612738, -1179644, 1, -1048581, -1610612733, -1048577, 1, -1114112, 1610612737, -1114108, 1610612739, -983045, 3, -983044, -1073741821, -983043, -1610612735, -983041, 1, -1048576, 1610612737, -1048574, -1610612735, -1048573, 3, -1048572, -1073741821, -917505, 1, -983040, 1610612737, -851969, 1, -917504, 1610612737, -786433, 1, -851968, 1610612737, -720897, 1, -786432, 1610612737, -655361, 1, -720896, 1610612737, -589825, 1, -655360, 1610612737, -524289, 1, -589824, 1610612737, -458753, 1, -524288, 1610612737, -393217, 1, -458752, 1610612737, -327681, 1, -393216, 1610612737, -262149, -1610612733, -262148, -1073741821, -262147, -1610612734, -262145, 1, -327680, 1610612737, -327678, 2, -327677, 3, -327676, 1610612739, -196631, 2, -196630, -1610612735, -196629, -1610612735, -196628, -1610612735, -196627, -1610612735, -196626, -1610612735, -196625, -1610612735, -196624, -1610612734, -196613, -1073741821, -196609, 1, -262144, 1610612737, -262140, 3, -262129, 2, -262128, -1610612735, -262127, -1610612735, -262126, -1610612735, -262125, -1610612735, -262124, -1610612735, -262123, -1610612735, -262122, -1610612734, -131095, 1, -131088, 1610612738, -131077, -1073741822, -131075, 2, -131074, -1610612735, -131073, 0, -196608, 0, -196607, -1610612735, -196606, -1610612734, -196604, 1610612738, -196593, -1073741822, -196586, 1610612737, -65559, 1, -65557, 2, -65556, -1610612735, -65555, -1610612735, -65554, -1610612734, -65539, 1, -65538, 0, -65537, 0, -131072, 0, -131071, 0, -131070, 1610612737, -131055, 2, -131054, -1610612735, -131053, -1610612735, -131052, -1610612734, -131050, 1610612737, -23, 1, -21, 1, -20, 0, -19, 0, -18, 0, -17, -1610612735, -16, -1610612735, -15, -1610612735, -14, -1610612735, -13, -1610612735, -12, -1610612735, -11, -1610612735, -10, -1610612735, -9, -1610612735, -8, -1610612735, -7, -1610612735, -6, -1610612735, -5, -1610612735, -4, -1610612735, -3, 0, -2, 0, -1, 0, -65536, 0, -65535, 0, -65534, 0, -65533, -1610612735, -65532, -1610612735, -65531, -1610612735, -65530, -1610612735, -65529, -1610612735, -65528, -1610612735, -65527, -1610612735, -65526, -1610612735, -65525, -1610612735, -65524, -1610612735, -65523, -1610612735, -65522, -1610612735, -65521, -1610612735, -65520, -1610612735, -65519, 0, -65518, 0, -65517, 0, -65516, 1610612737, -65514, 1610612737, 65513, 1, 65515, 1, 65516, 0, 65517, 0, 65518, 0, 65519, -1073741823, 65520, -1073741823, 65521, -1073741823, 65522, -1073741823, 65523, -1073741823, 65524, -1073741823, 65525, -1073741823, 65526, -1073741823, 65527, -1073741823, 65528, -1073741823, 65529, -1073741823, 65530, -1073741823, 65531, -1073741823, 65532, -1073741823, 65533, 0, 65534, 0, 65535, 0, 0, 0, 1, 0, 2, 0, 3, -1073741823, 4, -1073741823, 5, -1073741823, 6, -1073741823, 7, -1073741823, 8, -1073741823, 9, -1073741823, 10, -1073741823, 11, -1073741823, 12, -1073741823, 13, -1073741823, 14, -1073741823, 15, -1073741823, 16, -1073741823, 17, 0, 18, 0, 19, 0, 20, 1610612737, 22, 1610612737, 131049, 1, 131051, -1073741822, 131052, -1073741823, 131053, -1073741823, 131054, 1610612738, 131069, 1, 131070, 0, 131071, 0, 65536, 0, 65537, 0, 65538, 1610612737, 65553, -1073741822, 65554, -1073741823, 65555, -1073741823, 65556, 1610612738, 65558, 1610612737, 196585, 1, 196592, -1610612734, 196603, 2, 196605, -1073741822, 196606, -1073741823, 196607, 1610612736, 131072, 1610612736, 131073, -1073741823, 131074, 1610612738, 131076, -1610612734, 131087, 2, 131094, 1610612737, 262121, -1073741822, 262122, -1073741823, 262123, -1073741823, 262124, -1073741823, 262125, -1073741823, 262126, -1073741823, 262127, -1073741823, 262128, 1610612738, 262139, 1610612739, 262143, 1, 196608, 1610612737, 196612, -1610612733, 196623, -1073741822, 196624, -1073741823, 196625, -1073741823, 196626, -1073741823, 196627, -1073741823, 196628, -1073741823, 196629, -1073741823, 196630, 1610612738, 327675, 3, 327676, 1610612739, 327677, 1610612738, 327679, 1, 262144, 1610612737, 262146, -1073741822, 262147, -1610612733, 262148, -1073741821, 393215, 1, 327680, 1610612737, 458751, 1, 393216, 1610612737, 524287, 1, 458752, 1610612737, 589823, 1, 524288, 1610612737, 655359, 1, 589824, 1610612737, 720895, 1, 655360, 1610612737, 786431, 1, 720896, 1610612737, 851967, 1, 786432, 1610612737, 917503, 1, 851968, 1610612737, 983039, 1, 917504, 1610612737, 1048572, 2, 1048573, -1610612735, 1048575, 1, 983040, 1610612737, 983042, -1610612735, 983043, -1610612734, 1114108, 1, 1114111, 1, 1048576, 1610612737, 1048579, 1610612737, 1179644, 1, 1179646, 2, 1179647, 0, 1114112, 0, 1114113, -1610612734, 1114115, 1610612737, 1245180, 1, 1245182, 1, 1245183, 0, 1179648, 0, 1179649, 1610612737, 1179651, 1610612737, 1310716, 1, 1310718, 1, 1310719, 0, 1245184, 0, 1245185, 1610612737, 1245187, 1610612737, 1376252, 1, 1376254, -1073741822, 1376255, -1073741823, 1310720, -1073741823, 1310721, 1610612738, 1310723, 1610612737, 1441788, 1, 1376259, 1610612737, 1507324, -1073741822, 1507325, -1073741823, 1507326, -1073741823, 1507327, -1073741823, 1441792, -1073741823, 1441793, -1073741823, 1441794, -1073741823, 1441795, 1610612738 )
+
+[node name="floor_connector_A" parent="." instance=ExtResource( 2 )]
+
+visibility/visible = false
+tile_data = IntArray( -2097165, -1610612735, -2097164, -1610612735, -2097163, -1610612735, -2097162, -1610612735, -2097161, -1610612735, -2097160, -1610612735, -2097159, -1610612735, -2097158, -1610612735, -2097157, -1610612735, -2031629, -1073741823, -2031628, -1073741823, -2031627, -1073741823, -2031626, -1073741823, -2031625, -1073741823, -2031624, -1073741823, -2031623, -1073741823, -2031622, -1073741823, -2031621, -1073741823 )
+
+[node name="floor_connector_B" parent="." instance=ExtResource( 2 )]
+
+visibility/visible = false
+tile_data = IntArray( -2162684, -1610612735, -2162683, -1610612735, -2162682, -1610612735, -2162681, -1610612735, -2162680, -1610612735, -2162679, -1610612735, -2162678, -1610612735, -2162677, -1610612735, -2162676, -1610612735, -2097148, -1073741823, -2097147, -1073741823, -2097146, -1073741823, -2097145, -1073741823, -2097144, -1073741823, -2097143, -1073741823, -2097142, -1073741823, -2097141, -1073741823, -2097140, -1073741823 )
+
+[node name="floor_connector_C" parent="." instance=ExtResource( 2 )]
+
+visibility/visible = false
+tile_data = IntArray( -3014676, 2, -3014675, -1610612735, -3014674, -1610612735, -3014673, -1610612735, -3014672, -1610612735, -3014671, -1610612735, -3014670, -1610612735, -3014669, -1610612735, -3014668, -1610612735, -3014667, -1610612735, -3014666, -1610612735, -3014665, -1610612735, -3014664, -1610612735, -3014663, -1610612735, -3014662, -1610612735, -3080187, -1610612735, -3080186, -1610612735, -3080185, -1610612735, -3080184, -1610612735, -3080183, -1610612735, -3080182, -1610612735, -3080181, -1610612735, -3080180, -1610612735, -3080179, -1610612735, -3080178, -1610612735, -3080177, -1610612735, -3080176, -1610612735, -3080175, -1610612735, -3080174, -1610612735, -3080173, -1610612734, -2949140, 1, -2949139, 1610612736, -2949138, -1073741823, -2949137, -1073741823, -2949136, -1073741823, -2949135, -1073741823, -2949134, -1073741823, -2949133, -1073741823, -2949132, -1073741823, -2949131, -1073741823, -2949130, -1073741823, -2949129, -1073741823, -2949128, -1073741823, -2949127, -1073741823, -2949126, -1073741823, -3014651, -1073741823, -3014650, -1073741823, -3014649, -1073741823, -3014648, -1073741823, -3014647, -1073741823, -3014646, -1073741823, -3014645, -1073741823, -3014644, -1073741823, -3014643, -1073741823, -3014642, -1073741823, -3014641, -1073741823, -3014640, -1073741823, -3014639, -1073741823, -3014638, 1610612736, -3014637, 1610612737, -2883604, 1, -2883603, 1610612737, -2949102, 1, -2949101, 1610612737, -2818068, 1, -2818067, 1610612737, -2883566, 1, -2883565, 1610612737, -2752532, 1, -2752531, 1610612737, -2818030, 1, -2818029, 1610612737, -2686996, 1, -2686995, 1610612737, -2752494, 1, -2752493, 1610612737, -2621460, 1, -2621459, 1610612737, -2621441, 1, -2686976, 1610612737, -2686958, 1, -2686957, 1610612737, -2555924, 1, -2555923, 1610612737, -2555905, 1, -2621440, 1610612737, -2621422, 1, -2621421, 1610612737, -2490388, 1, -2490387, 1610612737, -2490369, 1, -2555904, 1610612737, -2555886, 1, -2555885, 1610612737, -2424852, 1, -2424851, 1610612737, -2424833, 1, -2490368, 1610612737, -2490350, 1, -2490349, 1610612737, -2359316, 1, -2359315, 1610612737, -2359297, 1, -2424832, 1610612737, -2424814, 1, -2424813, 1610612737 )
+
+[node name="player_spawner" parent="." instance=ExtResource( 3 )]
+
+spawn_stat = true
+
+[node name="player_container" type="Node" parent="."]
+
+[node name="text" type="Control" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="levels" type="Label" parent="text"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/rotation = 90.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -69.0
+margin/top = -432.0
+margin/right = 357.0
+margin/bottom = -293.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 10
+text = "LEVELS"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="debug" type="Label" parent="text"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 432.0
+margin/top = -69.0
+margin/right = 1019.0
+margin/bottom = 70.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 10
+text = "DEBUG"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="exit" type="Label" parent="text"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -868.0
+margin/top = -69.0
+margin/right = -442.0
+margin/bottom = 70.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 10
+text = "EXIT"
+align = 2
+valign = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="credit" type="Label" parent="text"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/rotation = 270.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 69.0
+margin/top = 432.0
+margin/right = 506.0
+margin/bottom = 571.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 10
+text = "CREDIT"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="bullet_container" type="Node" parent="."]
+
+[node name="explosion_container" type="Node" parent="."]
+
+[node name="block_extension" type="Node" parent="."]
+
+[node name="block_A_container_lvl2" type="Node" parent="."]
+
+script/script = ExtResource( 5 )
+
+[node name="block_A1_container" type="Node" parent="."]
+
+script/script = ExtResource( 6 )
+
+[node name="block_A2_container" type="Node" parent="."]
+
+script/script = ExtResource( 7 )
+
+[node name="block_A3_container" type="Node" parent="."]
+
+script/script = ExtResource( 8 )
+
+[node name="block_A_container_lvl3A" type="Node" parent="."]
+
+script/script = ExtResource( 8 )
+
+[node name="block_A_container_lvl3B" type="Node" parent="."]
+
+script/script = ExtResource( 8 )
+
+[node name="block_A_spawner" type="Node" parent="."]
+
+editor/display_folded = true
+
+[node name="block_down_spawner" type="Node" parent="block_A_spawner"]
+
+editor/display_folded = true
+
+[node name="spawner_2A_1" parent="block_A_spawner/block_down_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 0, -2592 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 11 )
+object_tscn_down = ExtResource( 12 )
+object_tscn_left = ExtResource( 13 )
+object_tscn_right = ExtResource( 14 )
+parent_path = NodePath("../../../block_A_container_lvl2")
+
+[node name="spawner_2A_2" parent="block_A_spawner/block_down_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -108, -2592 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 11 )
+object_tscn_down = ExtResource( 12 )
+object_tscn_left = ExtResource( 13 )
+object_tscn_right = ExtResource( 14 )
+parent_path = NodePath("../../../block_A_container_lvl2")
+
+[node name="spawner_A1" parent="block_A_spawner/block_down_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -108, -3888 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 11 )
+object_tscn_down = ExtResource( 12 )
+object_tscn_left = ExtResource( 13 )
+object_tscn_right = ExtResource( 14 )
+parent_path = NodePath("../../../block_A3_container")
+
+[node name="spawner_A2" parent="block_A_spawner/block_down_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 0, -3888 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 11 )
+object_tscn_down = ExtResource( 12 )
+object_tscn_left = ExtResource( 13 )
+object_tscn_right = ExtResource( 14 )
+parent_path = NodePath("../../../block_A3_container")
+
+[node name="spawner_3A_1" parent="block_A_spawner/block_down_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -2160, -3888 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 11 )
+object_tscn_down = ExtResource( 12 )
+object_tscn_left = ExtResource( 13 )
+object_tscn_right = ExtResource( 14 )
+parent_path = NodePath("../../../block_A_container_lvl3A")
+
+[node name="spawner_3A_2" parent="block_A_spawner/block_down_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -2052, -3888 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 11 )
+object_tscn_down = ExtResource( 12 )
+object_tscn_left = ExtResource( 13 )
+object_tscn_right = ExtResource( 14 )
+parent_path = NodePath("../../../block_A_container_lvl3A")
+
+[node name="spawner_3B_1" parent="block_A_spawner/block_down_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 1944, -3888 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 11 )
+object_tscn_down = ExtResource( 12 )
+object_tscn_left = ExtResource( 13 )
+object_tscn_right = ExtResource( 14 )
+parent_path = NodePath("../../../block_A_container_lvl3B")
+
+[node name="spawner_3B_2" parent="block_A_spawner/block_down_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 2052, -3888 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 11 )
+object_tscn_down = ExtResource( 12 )
+object_tscn_left = ExtResource( 13 )
+object_tscn_right = ExtResource( 14 )
+parent_path = NodePath("../../../block_A_container_lvl3B")
+
+[node name="spawner_B_ex1" parent="block_A_spawner/block_down_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -108, -2700 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 15 )
+object_tscn_down = ExtResource( 16 )
+object_tscn_left = ExtResource( 17 )
+object_tscn_right = ExtResource( 18 )
+parent_path = NodePath("../../../block_extension")
+
+[node name="spawner_B_ex2" parent="block_A_spawner/block_down_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 0, -2700 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 15 )
+object_tscn_down = ExtResource( 16 )
+object_tscn_left = ExtResource( 17 )
+object_tscn_right = ExtResource( 18 )
+parent_path = NodePath("../../../block_extension")
+
+[node name="spawner_B_ex3" parent="block_A_spawner/block_down_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -108, -2808 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 15 )
+object_tscn_down = ExtResource( 16 )
+object_tscn_left = ExtResource( 17 )
+object_tscn_right = ExtResource( 18 )
+parent_path = NodePath("../../../block_extension")
+
+[node name="spawner_B_ex4" parent="block_A_spawner/block_down_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 0, -2808 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 15 )
+object_tscn_down = ExtResource( 16 )
+object_tscn_left = ExtResource( 17 )
+object_tscn_right = ExtResource( 18 )
+parent_path = NodePath("../../../block_extension")
+
+[node name="block_left_spawner" type="Node" parent="block_A_spawner"]
+
+editor/display_folded = true
+
+[node name="spawner_A1" parent="block_A_spawner/block_left_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 324, -3564 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 11 )
+object_tscn_down = ExtResource( 12 )
+object_tscn_left = ExtResource( 13 )
+object_tscn_right = ExtResource( 14 )
+parent_path = NodePath("../../../block_A2_container")
+
+[node name="spawner_A2" parent="block_A_spawner/block_left_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 324, -3456 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 11 )
+object_tscn_down = ExtResource( 12 )
+object_tscn_left = ExtResource( 13 )
+object_tscn_right = ExtResource( 14 )
+parent_path = NodePath("../../../block_A2_container")
+
+[node name="spawner_B_ex1" parent="block_A_spawner/block_left_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 1404, -3564 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 15 )
+object_tscn_down = ExtResource( 16 )
+object_tscn_left = ExtResource( 17 )
+object_tscn_right = ExtResource( 18 )
+parent_path = NodePath("../../../block_extension")
+
+[node name="spawner_B_ex2" parent="block_A_spawner/block_left_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 1512, -3564 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 15 )
+object_tscn_down = ExtResource( 16 )
+object_tscn_left = ExtResource( 17 )
+object_tscn_right = ExtResource( 18 )
+parent_path = NodePath("../../../block_extension")
+
+[node name="spawner_B_ex3" parent="block_A_spawner/block_left_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 1404, -3456 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 15 )
+object_tscn_down = ExtResource( 16 )
+object_tscn_left = ExtResource( 17 )
+object_tscn_right = ExtResource( 18 )
+parent_path = NodePath("../../../block_extension")
+
+[node name="spawner_B_ex4" parent="block_A_spawner/block_left_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 1512, -3456 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 15 )
+object_tscn_down = ExtResource( 16 )
+object_tscn_left = ExtResource( 17 )
+object_tscn_right = ExtResource( 18 )
+parent_path = NodePath("../../../block_extension")
+
+[node name="block_right_spawner" type="Node" parent="block_A_spawner"]
+
+editor/display_folded = true
+
+[node name="spawner_A1" parent="block_A_spawner/block_right_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -432, -3564 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 11 )
+object_tscn_down = ExtResource( 12 )
+object_tscn_left = ExtResource( 13 )
+object_tscn_right = ExtResource( 14 )
+parent_path = NodePath("../../../block_A1_container")
+
+[node name="spawner_A2" parent="block_A_spawner/block_right_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -432, -3456 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 11 )
+object_tscn_down = ExtResource( 12 )
+object_tscn_left = ExtResource( 13 )
+object_tscn_right = ExtResource( 14 )
+parent_path = NodePath("../../../block_A1_container")
+
+[node name="spawner_B_ex1" parent="block_A_spawner/block_right_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -1620, -3564 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 15 )
+object_tscn_down = ExtResource( 16 )
+object_tscn_left = ExtResource( 17 )
+object_tscn_right = ExtResource( 18 )
+parent_path = NodePath("../../../block_extension")
+
+[node name="spawner_B_ex2" parent="block_A_spawner/block_right_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -1512, -3564 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 15 )
+object_tscn_down = ExtResource( 16 )
+object_tscn_left = ExtResource( 17 )
+object_tscn_right = ExtResource( 18 )
+parent_path = NodePath("../../../block_extension")
+
+[node name="spawner_B_ex3" parent="block_A_spawner/block_right_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -1620, -3456 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 15 )
+object_tscn_down = ExtResource( 16 )
+object_tscn_left = ExtResource( 17 )
+object_tscn_right = ExtResource( 18 )
+parent_path = NodePath("../../../block_extension")
+
+[node name="spawner_B_ex4" parent="block_A_spawner/block_right_spawner" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -1512, -3456 )
+script/script = ExtResource( 10 )
+object_tscn_up = ExtResource( 15 )
+object_tscn_down = ExtResource( 16 )
+object_tscn_left = ExtResource( 17 )
+object_tscn_right = ExtResource( 18 )
+parent_path = NodePath("../../../block_extension")
+
+[node name="block_up_spawner" type="Node" parent="block_A_spawner"]
+
+[node name="level1_text" type="Control" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -277.0
+margin/top = -2337.0
+margin/right = -237.0
+margin/bottom = -2297.0
+
+[node name="level1" type="Label" parent="level1_text"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 14.0
+margin/top = 17.0
+margin/right = 451.0
+margin/bottom = 156.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "LEVEL 1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec1" type="Label" parent="level1_text"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -5.0
+margin/top = 39.0
+margin/right = 432.0
+margin/bottom = 192.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = ".              ."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec2" type="Label" parent="level1_text"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 20.0
+margin/top = 23.0
+margin/right = 580.0
+margin/bottom = 176.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = "______"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info" type="Label" parent="level1_text"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 96.0
+margin/right = 452.0
+margin/bottom = 235.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 4
+custom_constants/shadow_offset_y = 1
+text = "\n* Difficulty\n* Enemy Type\n\n* Rare Enemy"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info1" type="Label" parent="level1_text"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = 96.0
+margin/right = 595.0
+margin/bottom = 235.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 4
+custom_constants/shadow_offset_y = 1
+text = "\n:  \?\?\n:  \?\?\n   \?\?\n:  \?\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info2" type="Label" parent="level1_text"]
+
+visibility/visible = false
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = 96.0
+margin/right = 595.0
+margin/bottom = 235.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 4
+custom_constants/shadow_offset_y = 1
+text = "\n:  Easy\n:  Type A_1 | Type A_2\n   Type C_1 | Type C_1-SHIELD\n:  Type A_0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="level2_text" type="Control" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -308.0
+margin/top = -3752.0
+margin/right = -268.0
+margin/bottom = -3712.0
+
+[node name="level2" type="Label" parent="level2_text"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 14.0
+margin/top = 17.0
+margin/right = 451.0
+margin/bottom = 156.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "LEVEL 2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec1" type="Label" parent="level2_text"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -5.0
+margin/top = 39.0
+margin/right = 432.0
+margin/bottom = 192.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = ".              ."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec2" type="Label" parent="level2_text"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 20.0
+margin/top = 23.0
+margin/right = 580.0
+margin/bottom = 176.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = "______"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info_base" type="Control" parent="level2_text"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="info" type="Label" parent="level2_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 122.0
+margin/right = 452.0
+margin/bottom = 455.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "* Difficulty\n* Enemy Type\n\n\n* Rare Enemy"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info1" type="Label" parent="level2_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = 122.0
+margin/right = 595.0
+margin/bottom = 438.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = ":  \?\?\n:  \?\?\n   \?\?\n   \?\?\n:  \?\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info_A" type="Control" parent="level2_text"]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="info" type="Label" parent="level2_text/info_A"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 122.0
+margin/right = 452.0
+margin/bottom = 446.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "* Difficulty\n* Enemy Type\n\n\n\n* Rare Enemy"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info2" type="Label" parent="level2_text/info_A"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = 122.0
+margin/right = 631.0
+margin/bottom = 436.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = ":  Hard\n:  Type A_3  \n   Type C_1.0  |  Type C_1.1  \n   Type C_1-Shield\n   Type C_3.1  |  Type C_3.2  |  Type C_3.3\n:  Type C_2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info_B" type="Control" parent="level2_text"]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="info" type="Label" parent="level2_text/info_B"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 122.0
+margin/right = 452.0
+margin/bottom = 449.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "* Difficulty\n* Enemy Type\n\n* Rare Enemy"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info2" type="Label" parent="level2_text/info_B"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = 122.0
+margin/right = 631.0
+margin/bottom = 436.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = ":  Medium\n:  Type A_1  |  Type T_1 \n   Type A_2  |  Type T_2  \n:  Type C_3.3 - Shield"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info_AB" type="Control" parent="level2_text"]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="info" type="Label" parent="level2_text/info_AB"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 122.0
+margin/right = 452.0
+margin/bottom = 449.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "* Difficulty\n* Enemy Type\n\n\n\n* Rare Enemy"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info2" type="Label" parent="level2_text/info_AB"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = 122.0
+margin/right = 631.0
+margin/bottom = 436.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = ":  Medium - Hard\n:  Type A_1    \n   Type C_1    \n   Type C_3.1 \n   Type T_1    \n:  Type C_2    "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info3" type="Label" parent="level2_text/info_AB"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 285.0
+margin/top = 122.0
+margin/right = 899.0
+margin/bottom = 436.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "\n|  Type A_2     \n|  Type C_1.1  \n|  Type C_3.2  \n|  Type T_2\n|  Type C_3.3 - Shield"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info4" type="Label" parent="level2_text/info_AB"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 420.0
+margin/top = 122.0
+margin/right = 893.0
+margin/bottom = 436.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "\n|  Type A_3 \n|  Type C_1 - Shield\n|  Type C_3.3\n"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="level3_A_text" type="Control" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -2333.0
+margin/top = -3734.0
+margin/right = -2293.0
+margin/bottom = -3694.0
+
+[node name="info_base" type="Control" parent="level3_A_text"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="level3A" type="Label" parent="level3_A_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 14.0
+margin/top = 17.0
+margin/right = 451.0
+margin/bottom = 156.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "\?\?\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec1" type="Label" parent="level3_A_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -5.0
+margin/top = 39.0
+margin/right = 432.0
+margin/bottom = 192.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = ".              ."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec2" type="Label" parent="level3_A_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 20.0
+margin/top = 23.0
+margin/right = 580.0
+margin/bottom = 176.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = "______"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info" type="Label" parent="level3_A_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 122.0
+margin/right = 452.0
+margin/bottom = 261.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "* Difficulty\n* Enemy Type\n\n* Rare Enemy"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info1" type="Label" parent="level3_A_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = 122.0
+margin/right = 595.0
+margin/bottom = 261.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = ":  \?\?\n:  \?\?\n   \?\?\n:  \?\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info1" type="Control" parent="level3_A_text"]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="level3A" type="Label" parent="level3_A_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 17.0
+margin/right = 455.0
+margin/bottom = 170.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "LEVEL 3\n"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="end3A" type="Label" parent="level3_A_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -19.0
+margin/top = 501.0
+margin/right = 418.0
+margin/bottom = 640.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "[A]live."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec1" type="Label" parent="level3_A_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -19.0
+margin/top = 39.0
+margin/right = 418.0
+margin/bottom = 192.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = ".                 ."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec2" type="Label" parent="level3_A_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 13.0
+margin/top = 23.0
+margin/right = 573.0
+margin/bottom = 176.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = "_______"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info" type="Label" parent="level3_A_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 124.0
+margin/right = 452.0
+margin/bottom = 454.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "* Difficulty\n* Enemy Type\n\n\n\n\n* Rare Enemy"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info1" type="Label" parent="level3_A_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = 124.0
+margin/right = 595.0
+margin/bottom = 467.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = ":  Very Hard\n:  Type A_1    \n   Type C_1    \n   Type C_1.1\n   Type C_3.1 \n   Type T_1    \n:  Type A_0    "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info2" type="Label" parent="level3_A_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 291.0
+margin/top = 124.0
+margin/right = 731.0
+margin/bottom = 467.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "\n|   Type A_2\n\n|   Type C_1.2\n|   Type C_3.3\n|   Type T_1.1\n|   Type C_3.3 - Shield"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="level3_B_text" type="Control" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1786.0
+margin/top = -3732.0
+margin/right = 1826.0
+margin/bottom = -3692.0
+
+[node name="info_base" type="Control" parent="level3_B_text"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="level3B" type="Label" parent="level3_B_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 14.0
+margin/top = 17.0
+margin/right = 451.0
+margin/bottom = 156.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "\?\?\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec1" type="Label" parent="level3_B_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -5.0
+margin/top = 39.0
+margin/right = 432.0
+margin/bottom = 192.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = ".              ."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec2" type="Label" parent="level3_B_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 20.0
+margin/top = 23.0
+margin/right = 580.0
+margin/bottom = 176.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = "______"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info" type="Label" parent="level3_B_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 122.0
+margin/right = 452.0
+margin/bottom = 261.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "* Difficulty\n* Enemy Type\n\n* Rare Enemy"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info1" type="Label" parent="level3_B_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = 122.0
+margin/right = 595.0
+margin/bottom = 261.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = ":  \?\?\n:  \?\?\n   \?\?\n:  \?\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info_1" type="Control" parent="level3_B_text"]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="level3B" type="Label" parent="level3_B_text/info_1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 14.0
+margin/top = 17.0
+margin/right = 451.0
+margin/bottom = 156.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "LEVEL 3"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="endl3B" type="Label" parent="level3_B_text/info_1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -33.0
+margin/top = 499.0
+margin/right = 404.0
+margin/bottom = 638.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "Fair [B]attle"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec1" type="Label" parent="level3_B_text/info_1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -18.0
+margin/top = 39.0
+margin/right = 419.0
+margin/bottom = 192.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = ".                ."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec2" type="Label" parent="level3_B_text/info_1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 5.0
+margin/top = 23.0
+margin/right = 565.0
+margin/bottom = 176.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = "_______"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info" type="Label" parent="level3_B_text/info_1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 122.0
+margin/right = 452.0
+margin/bottom = 405.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "* Difficulty\n* Enemy Type\n\n\n\n* Rare Enemy"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info1" type="Label" parent="level3_B_text/info_1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = 122.0
+margin/right = 595.0
+margin/bottom = 400.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = ":  Very Hard\n:  Type A_1\n   Type C_1.1 \n   Type C_3.0\n   Type T_1   \n:  Type C_3.3 - Shield"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info2" type="Label" parent="level3_B_text/info_1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 293.0
+margin/top = 122.0
+margin/right = 730.0
+margin/bottom = 400.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "\n|  Type A_2\n\n|  Type C_3.3\n|  Type T_1.1\n"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="level3_C_text" type="Control" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -254.0
+margin/top = -5228.0
+margin/right = -214.0
+margin/bottom = -5188.0
+
+[node name="info_base" type="Control" parent="level3_C_text"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="level3C" type="Label" parent="level3_C_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 14.0
+margin/top = 17.0
+margin/right = 451.0
+margin/bottom = 156.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "\?\?\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec1" type="Label" parent="level3_C_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -5.0
+margin/top = 39.0
+margin/right = 432.0
+margin/bottom = 192.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = ".              ."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec2" type="Label" parent="level3_C_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 20.0
+margin/top = 23.0
+margin/right = 580.0
+margin/bottom = 176.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = "______"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info" type="Label" parent="level3_C_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 122.0
+margin/right = 452.0
+margin/bottom = 261.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "* Difficulty\n* Enemy Type\n\n* Rare Enemy"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info1" type="Label" parent="level3_C_text/info_base"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = 122.0
+margin/right = 595.0
+margin/bottom = 261.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = ":  \?\?\n:  \?\?\n   \?\?\n:  \?\?"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info1" type="Control" parent="level3_C_text"]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="level3C" type="Label" parent="level3_C_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 14.0
+margin/top = 17.0
+margin/right = 451.0
+margin/bottom = 156.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "LEVEL 3+"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="end3C" type="Label" parent="level3_C_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -35.0
+margin/top = 473.0
+margin/right = 402.0
+margin/bottom = 612.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "[C]allousity"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec1" type="Label" parent="level3_C_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -27.0
+margin/top = 39.0
+margin/right = 410.0
+margin/bottom = 192.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = ".                   ."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="dec2" type="Label" parent="level3_C_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 5.0
+margin/top = 23.0
+margin/right = 565.0
+margin/bottom = 176.0
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 5
+text = "________"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info" type="Label" parent="level3_C_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 122.0
+margin/right = 452.0
+margin/bottom = 390.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "* Difficulty\n* Enemy Type\n\n\n* Rare Enemy"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info1" type="Label" parent="level3_C_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = 122.0
+margin/right = 595.0
+margin/bottom = 424.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = ":  Super Hard\n:  Type A_1     \n   Type C_1.1  \n   Type T_1.1\n:  Type A_0     \n   Type C_3.3 - Shield"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="info2" type="Label" parent="level3_C_text/info1"]
+
+visibility/opacity = 0.9
+visibility/self_opacity = 0.9
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 291.0
+margin/top = 122.0
+margin/right = 728.0
+margin/bottom = 424.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.410156, 0.410156, 0.410156, 1 )
+custom_colors/font_color_shadow = Color( 0.597656, 0.597656, 0.597656, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 6
+custom_constants/shadow_offset_y = 1
+text = "\n|    Type A_2\n|    Type C_3.3\n\n|    Type C_0   \n"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="block_A" parent="." instance=ExtResource( 21 )]
+
+tile_data = IntArray( -2293782, 0, -2293781, 0, -2293778, 0, -2293777, 0, -2293763, 0, -2293762, 0, -2359295, 0, -2359294, 0, -2359280, 0, -2359279, 0, -2359276, 0, -2359275, 0, -2228247, -1073741824, -2228240, -1610612736, -2228228, -1073741824, -2293757, -1610612736, -2293745, -1073741824, -2293738, -1610612736, -2162711, -1073741824, -2162704, -1610612736, -2162692, -1073741824, -2228221, -1610612736, -2228209, -1073741824, -2228202, -1610612736, -2097175, -1073741824, -2162666, -1610612736, -2031639, -1073741824, -2097130, -1610612736, -1966103, -1073741824, -1966096, -1610612736, -1966084, -1073741824, -2031613, -1610612736, -2031601, -1073741824, -2031594, -1610612736, -1900567, -1073741824, -1900560, -1610612736, -1900548, -1073741824, -1966077, -1610612736, -1966065, -1073741824, -1966058, -1610612736, -1835030, 1610612736, -1835029, 1610612736, -1835028, 1610612736, -1835027, 1610612736, -1835026, 1610612736, -1835025, 1610612736, -1835011, 1610612736, -1835010, 1610612736, -1900543, 1610612736, -1900542, 1610612736, -1900528, 1610612736, -1900527, 1610612736, -1900526, 1610612736, -1900525, 1610612736, -1900524, 1610612736, -1900523, 1610612736 )
+
+[node name="main_camera" type="Camera2D" parent="."]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 2.5, 2.5 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = true
+smoothing/speed = 10.0
+drag_margin/left = 0.0
+drag_margin/top = 0.0
+drag_margin/right = 0.0
+drag_margin/bottom = 0.0
+script/script = ExtResource( 22 )
+player_parent = NodePath("../player_container")
+
+[node name="scene_changer" type="Node" parent="."]
+
+editor/display_folded = true
+
+[node name="scene_changer1" parent="scene_changer" instance=ExtResource( 23 )]
+
+transform/pos = Vector2( 202.683, -1994.88 )
+which_level = "level1"
+
+[node name="scene_changer2" parent="scene_changer" instance=ExtResource( 23 )]
+
+transform/pos = Vector2( 217.78, -3237.4 )
+which_level = "level2"
+
+[node name="scene_changer3_A" parent="scene_changer" instance=ExtResource( 23 )]
+
+transform/pos = Vector2( -1832, -3240.8 )
+which_level = "level3_A"
+
+[node name="scene_changer3_B" parent="scene_changer" instance=ExtResource( 23 )]
+
+transform/pos = Vector2( 2269.19, -3239.75 )
+which_level = "level3_B"
+
+[node name="scene_changer3_C" parent="scene_changer" instance=ExtResource( 23 )]
+
+transform/pos = Vector2( 209.601, -4758.82 )
+which_level = "level3_C"
+
+[node name="scene_changer_credit" parent="scene_changer" instance=ExtResource( 23 )]
+
+transform/pos = Vector2( -0.635361, 2044.97 )
+which_level = "credit_main"
+
+[node name="scene_changer_debug" parent="scene_changer" instance=ExtResource( 23 )]
+
+transform/pos = Vector2( 2050.23, -1.47501 )
+which_level = "debug"
+pos_direction = "left"
+
+[node name="scene_changer_exit" parent="scene_changer" instance=ExtResource( 23 )]
+
+transform/pos = Vector2( -2050.86, 0 )
+which_level = "exit"
+change_delay = 10
+pos_direction = "right"
+
+[node name="main_camera_seetings" type="Node" parent="."]
+
+editor/display_folded = true
+
+[node name="zoom-2-5" type="Area2D" parent="main_camera_seetings"]
+
+editor/display_folded = true
+transform/pos = Vector2( -3.51135, 0 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 24 )
+camera_path = NodePath("../../main_camera")
+set_zoom = Vector2( 2.5, 2.5 )
+
+[node name="collision1" type="CollisionPolygon2D" parent="main_camera_seetings/zoom-2-5"]
+
+build_mode = 0
+polygon = Vector2Array( -416.854, -426.565, 429.379, -426.565, 429.379, 419.668, -416.854, 419.668 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="zoom-2" type="Area2D" parent="main_camera_seetings"]
+
+editor/display_folded = true
+transform/pos = Vector2( -842.722, -558.303 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 3 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+shapes/2/shape = SubResource( 4 )
+shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/2/trigger = false
+shapes/3/shape = SubResource( 5 )
+shapes/3/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/3/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 24 )
+camera_path = NodePath("../../main_camera")
+set_zoom = Vector2( 2, 2 )
+
+[node name="collision1" type="CollisionPolygon2D" parent="main_camera_seetings/zoom-2"]
+
+build_mode = 0
+polygon = Vector2Array( 703.228, -1103.47, 979.717, -1103.47, 979.717, 102.416, 703.228, 102.416 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="collision2" type="CollisionPolygon2D" parent="main_camera_seetings/zoom-2"]
+
+build_mode = 0
+polygon = Vector2Array( 691.971, 1002.59, 1001.37, 1002.59, 1001.37, 2306.48, 691.971, 2306.48 )
+shape_range = Vector2( 1, 1 )
+trigger = false
+
+[node name="collision3" type="CollisionPolygon2D" parent="main_camera_seetings/zoom-2"]
+
+build_mode = 0
+polygon = Vector2Array( 362.067, 418.731, 362.067, 697.189, -756.185, 697.189, -756.185, 418.731 )
+shape_range = Vector2( 2, 2 )
+trigger = false
+
+[node name="collision4" type="CollisionPolygon2D" parent="main_camera_seetings/zoom-2"]
+
+build_mode = 0
+polygon = Vector2Array( 1319.55, 412.755, 1319.55, 691.212, 2539.46, 691.212, 2539.46, 412.755 )
+shape_range = Vector2( 3, 3 )
+trigger = false
+
+[node name="zoom-1-5" type="Area2D" parent="main_camera_seetings"]
+
+editor/display_folded = true
+transform/pos = Vector2( -490.779, -2159.43 )
+input/pickable = true
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 24 )
+camera_path = NodePath("../../main_camera")
+set_zoom = Vector2( 1.5, 1.5 )
+
+[node name="collision" type="CollisionPolygon2D" parent="main_camera_seetings/zoom-1-5"]
+
+build_mode = 0
+polygon = Vector2Array( 140.876, -352.28, 840.237, -352.28, 840.237, 355.26, 140.876, 355.26 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="hint" parent="." instance=ExtResource( 25 )]
+
+player_parent = NodePath("../player_container")
+
+

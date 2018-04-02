@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://scripts/block_B.gd" type="Script" id=1]
+[ext_resource path="res://scenes/block_scenes/block_b_explosion.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/block_B.png" type="Texture" id=3]
+[ext_resource path="res://sprites/block_B_hit.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 50, 50 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ { "frames":[ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ) ], "loop":false, "name":"hit", "speed":9.0 } ]
+
+[node name="block_B" type="StaticBody2D" groups=[ "block_B" ]]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 54, 54 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script/script = ExtResource( 1 )
+health = 5
+explosion_tscn = ExtResource( 2 )
+
+[node name="block_collision" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 54, 54 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="sprite" type="AnimatedSprite" parent="."]
+
+transform/pos = Vector2( 54, 54 )
+frames = SubResource( 2 )
+animation = "hit"
+
+

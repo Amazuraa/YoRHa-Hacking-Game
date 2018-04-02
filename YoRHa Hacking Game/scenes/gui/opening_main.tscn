@@ -1,0 +1,449 @@
+[gd_scene load_steps=155 format=1]
+
+[ext_resource path="res://scripts/gui/opening_main.gd" type="Script" id=1]
+[ext_resource path="res://sprites/opening/op_scn3/op_00335.png" type="Texture" id=2]
+[ext_resource path="res://sprites/opening/op_scn3/op_00335_1.png" type="Texture" id=3]
+[ext_resource path="res://sprites/opening/op_scn3/op_00335_2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/opening/op_scn3/op_00335_3.png" type="Texture" id=5]
+[ext_resource path="res://sprites/opening/op_scn3/op_00335_4.png" type="Texture" id=6]
+[ext_resource path="res://sprites/opening/op_scn3/op_00335_5.png" type="Texture" id=7]
+[ext_resource path="res://sprites/opening/op_scn3/op_00335_6.png" type="Texture" id=8]
+[ext_resource path="res://sprites/opening/op_scn3/op_00335_7.png" type="Texture" id=9]
+[ext_resource path="res://sprites/opening/op_scn3/op_00336.png" type="Texture" id=10]
+[ext_resource path="res://sprites/opening/op_scn3/op_00337.png" type="Texture" id=11]
+[ext_resource path="res://sprites/opening/op_scn3/op_00338.png" type="Texture" id=12]
+[ext_resource path="res://sprites/opening/op_scn3/op_00339.png" type="Texture" id=13]
+[ext_resource path="res://sprites/opening/op_scn3/op_00340.png" type="Texture" id=14]
+[ext_resource path="res://sprites/opening/op_scn3/op_00341.png" type="Texture" id=15]
+[ext_resource path="res://sprites/opening/op_scn3/op_00342.png" type="Texture" id=16]
+[ext_resource path="res://sprites/opening/op_scn3/op_00343.png" type="Texture" id=17]
+[ext_resource path="res://sprites/opening/op_scn3/op_00344.png" type="Texture" id=18]
+[ext_resource path="res://sprites/opening/op_scn3/op_00345.png" type="Texture" id=19]
+[ext_resource path="res://sprites/opening/op_scn3/op_00346.png" type="Texture" id=20]
+[ext_resource path="res://sprites/opening/op_scn3/op_00347.png" type="Texture" id=21]
+[ext_resource path="res://sprites/bg2.png" type="Texture" id=22]
+[ext_resource path="res://sprites/opening/op_scn4/op_00348.png" type="Texture" id=23]
+[ext_resource path="res://sprites/opening/op_scn4/op_00349.png" type="Texture" id=24]
+[ext_resource path="res://sprites/opening/op_scn4/op_00350.png" type="Texture" id=25]
+[ext_resource path="res://sprites/opening/op_scn4/op_00351.png" type="Texture" id=26]
+[ext_resource path="res://sprites/opening/op_scn4/op_00352.png" type="Texture" id=27]
+[ext_resource path="res://sprites/opening/op_scn4/op_00353.png" type="Texture" id=28]
+[ext_resource path="res://sprites/opening/op_scn4/op_00354.png" type="Texture" id=29]
+[ext_resource path="res://sprites/opening/op_scn4/op_00355.png" type="Texture" id=30]
+[ext_resource path="res://sprites/opening/op_scn4/op_00356.png" type="Texture" id=31]
+[ext_resource path="res://sprites/opening/op_scn4/op_00357.png" type="Texture" id=32]
+[ext_resource path="res://sprites/opening/op_scn4/op_00358.png" type="Texture" id=33]
+[ext_resource path="res://sprites/opening/op_scn4/op_00359.png" type="Texture" id=34]
+[ext_resource path="res://sprites/opening/op_scn4/op_00360.png" type="Texture" id=35]
+[ext_resource path="res://sprites/opening/op_scn4/op_00361.png" type="Texture" id=36]
+[ext_resource path="res://sprites/opening/op_scn4/op_00362.png" type="Texture" id=37]
+[ext_resource path="res://sprites/opening/op_scn4/op_00363.png" type="Texture" id=38]
+[ext_resource path="res://sprites/opening/op_scn4/op_00364.png" type="Texture" id=39]
+[ext_resource path="res://sprites/opening/op_scn4/op_00365.png" type="Texture" id=40]
+[ext_resource path="res://sprites/opening/op_scn4/op_00366.png" type="Texture" id=41]
+[ext_resource path="res://sprites/opening/op_scn4/op_00367.png" type="Texture" id=42]
+[ext_resource path="res://sprites/opening/op_scn4/op_00368.png" type="Texture" id=43]
+[ext_resource path="res://sprites/opening/op_scn4/op_00369.png" type="Texture" id=44]
+[ext_resource path="res://sprites/opening/op_scn4/op_00370.png" type="Texture" id=45]
+[ext_resource path="res://sprites/opening/op_scn4/op_00371.png" type="Texture" id=46]
+[ext_resource path="res://sprites/opening/op_scn4/op_00372.png" type="Texture" id=47]
+[ext_resource path="res://sprites/opening/op_scn4/op_00373.png" type="Texture" id=48]
+[ext_resource path="res://sprites/opening/op_scn4/op_00374.png" type="Texture" id=49]
+[ext_resource path="res://sprites/opening/op_scn4/op_00375.png" type="Texture" id=50]
+[ext_resource path="res://sprites/opening/op_scn4/op_00376.png" type="Texture" id=51]
+[ext_resource path="res://sprites/opening/op_scn4/op_00377.png" type="Texture" id=52]
+[ext_resource path="res://sprites/opening/op_scn4/op_00378.png" type="Texture" id=53]
+[ext_resource path="res://sprites/opening/op_scn4/op_00379.png" type="Texture" id=54]
+[ext_resource path="res://sprites/opening/op_scn4/op_00380.png" type="Texture" id=55]
+[ext_resource path="res://sprites/opening/op_scn4/op_00381.png" type="Texture" id=56]
+[ext_resource path="res://sprites/opening/op_scn4/op_00382.png" type="Texture" id=57]
+[ext_resource path="res://sprites/opening/op_scn4/op_00383.png" type="Texture" id=58]
+[ext_resource path="res://sprites/opening/op_scn4/op_00384.png" type="Texture" id=59]
+[ext_resource path="res://sprites/opening/op_scn4/op_00385.png" type="Texture" id=60]
+[ext_resource path="res://sprites/opening/op_scn4/op_00386.png" type="Texture" id=61]
+[ext_resource path="res://sprites/opening/op_scn4/op_00387.png" type="Texture" id=62]
+[ext_resource path="res://sprites/opening/op_scn4/op_00388.png" type="Texture" id=63]
+[ext_resource path="res://sprites/opening/op_scn4/op_00389.png" type="Texture" id=64]
+[ext_resource path="res://sprites/opening/op_scn4/op_00390.png" type="Texture" id=65]
+[ext_resource path="res://sprites/opening/op_scn4/op_00391.png" type="Texture" id=66]
+[ext_resource path="res://sprites/opening/op_scn4/op_00392.png" type="Texture" id=67]
+[ext_resource path="res://sprites/opening/op_scn4/op_00393.png" type="Texture" id=68]
+[ext_resource path="res://sprites/opening/op_scn4/op_00394.png" type="Texture" id=69]
+[ext_resource path="res://sprites/opening/op_scn4/op_00395.png" type="Texture" id=70]
+[ext_resource path="res://sprites/opening/op_scn4/op_00396.png" type="Texture" id=71]
+[ext_resource path="res://sprites/opening/op_scn4/op_00397.png" type="Texture" id=72]
+[ext_resource path="res://sprites/opening/op_scn4/op_00398.png" type="Texture" id=73]
+[ext_resource path="res://sprites/opening/op_scn4/op_00399.png" type="Texture" id=74]
+[ext_resource path="res://sprites/opening/op_scn4/op_00400.png" type="Texture" id=75]
+[ext_resource path="res://sprites/opening/op_scn4/op_00401.png" type="Texture" id=76]
+[ext_resource path="res://sprites/opening/op_scn4/op_00402.png" type="Texture" id=77]
+[ext_resource path="res://sprites/opening/op_scn4/op_00403.png" type="Texture" id=78]
+[ext_resource path="res://sprites/opening/op_scn4/op_00404.png" type="Texture" id=79]
+[ext_resource path="res://sprites/opening/op_scn4/op_00405.png" type="Texture" id=80]
+[ext_resource path="res://sprites/opening/op_scn4/op_00406.png" type="Texture" id=81]
+[ext_resource path="res://sprites/opening/op_scn4/op_00407.png" type="Texture" id=82]
+[ext_resource path="res://sprites/opening/op_scn4/op_00408.png" type="Texture" id=83]
+[ext_resource path="res://sprites/opening/op_scn4/op_00409.png" type="Texture" id=84]
+[ext_resource path="res://sprites/opening/op_scn4/op_00410.png" type="Texture" id=85]
+[ext_resource path="res://sprites/opening/op_scn4/op_00411.png" type="Texture" id=86]
+[ext_resource path="res://sprites/opening/op_scn4/op_00412.png" type="Texture" id=87]
+[ext_resource path="res://sprites/opening/op_scn4/op_00413.png" type="Texture" id=88]
+[ext_resource path="res://sprites/opening/op_scn4/op_00414.png" type="Texture" id=89]
+[ext_resource path="res://sprites/opening/op_scn4/op_00415.png" type="Texture" id=90]
+[ext_resource path="res://sprites/opening/op_scn4/op_00416.png" type="Texture" id=91]
+[ext_resource path="res://sprites/opening/op_scn4/op_00417.png" type="Texture" id=92]
+[ext_resource path="res://sprites/opening/op_scn4/op_00418.png" type="Texture" id=93]
+[ext_resource path="res://sprites/opening/op_scn4/op_00419.png" type="Texture" id=94]
+[ext_resource path="res://sprites/opening/op_scn4/op_00420.png" type="Texture" id=95]
+[ext_resource path="res://sprites/opening/op_scn4/op_00421.png" type="Texture" id=96]
+[ext_resource path="res://sprites/opening/op_scn4/op_00422.png" type="Texture" id=97]
+[ext_resource path="res://sprites/opening/op_scn4/op_00423.png" type="Texture" id=98]
+[ext_resource path="res://sprites/opening/op_scn4/op_00424.png" type="Texture" id=99]
+[ext_resource path="res://sprites/opening/op_scn4/op_00425.png" type="Texture" id=100]
+[ext_resource path="res://sprites/opening/op_scn4/op_00426.png" type="Texture" id=101]
+[ext_resource path="res://sprites/opening/op_scn4/op_00427.png" type="Texture" id=102]
+[ext_resource path="res://sprites/opening/op_scn4/op_00428.png" type="Texture" id=103]
+[ext_resource path="res://sprites/opening/op_scn4/op_00429.png" type="Texture" id=104]
+[ext_resource path="res://sprites/opening/op_scn4/op_00430.png" type="Texture" id=105]
+[ext_resource path="res://sprites/opening/op_scn4/op_00431.png" type="Texture" id=106]
+[ext_resource path="res://sprites/opening/op_scn4/op_00432.png" type="Texture" id=107]
+[ext_resource path="res://sprites/opening/op_scn4/op_00433.png" type="Texture" id=108]
+[ext_resource path="res://sprites/opening/op_scn4/op_00434.png" type="Texture" id=109]
+[ext_resource path="res://sprites/opening/op_scn4/op_00435.png" type="Texture" id=110]
+[ext_resource path="res://sprites/opening/op_scn4/op_00436.png" type="Texture" id=111]
+[ext_resource path="res://sprites/opening/op_scn4/op_00437.png" type="Texture" id=112]
+[ext_resource path="res://sprites/opening/op_scn4/op_00438.png" type="Texture" id=113]
+[ext_resource path="res://sprites/opening/op_scn4/op_00439.png" type="Texture" id=114]
+[ext_resource path="res://sprites/opening/op_scn4/op_00440.png" type="Texture" id=115]
+[ext_resource path="res://sprites/opening/op_scn4/op_00441.png" type="Texture" id=116]
+[ext_resource path="res://sprites/opening/op_scn4/op_00442.png" type="Texture" id=117]
+[ext_resource path="res://sprites/opening/op_scn4/op_00443.png" type="Texture" id=118]
+[ext_resource path="res://sprites/opening/op_scn4/op_00444.png" type="Texture" id=119]
+[ext_resource path="res://sprites/opening/op_scn4/op_00445.png" type="Texture" id=120]
+[ext_resource path="res://sprites/opening/op_scn4/op_00446.png" type="Texture" id=121]
+[ext_resource path="res://sprites/opening/op_scn4/op_00447.png" type="Texture" id=122]
+[ext_resource path="res://sprites/opening/op_scn4/op_00448.png" type="Texture" id=123]
+[ext_resource path="res://sprites/opening/op_scn4/op_00449.png" type="Texture" id=124]
+[ext_resource path="res://sprites/opening/op_scn4/op_00450.png" type="Texture" id=125]
+[ext_resource path="res://sprites/opening/scn1/op_00057.png" type="Texture" id=126]
+[ext_resource path="res://sprites/opening/scn1/op_00056.png" type="Texture" id=127]
+[ext_resource path="res://sprites/opening/scn1/op_00055.png" type="Texture" id=128]
+[ext_resource path="res://sprites/opening/scn1/op_00054.png" type="Texture" id=129]
+[ext_resource path="res://sprites/opening/scn1/op_00053.png" type="Texture" id=130]
+[ext_resource path="res://sprites/opening/scn1/op_00052.png" type="Texture" id=131]
+[ext_resource path="res://sprites/opening/scn1/op_00051.png" type="Texture" id=132]
+[ext_resource path="res://sprites/opening/scn1/op_00050.png" type="Texture" id=133]
+[ext_resource path="res://sprites/opening/scn1/op_00049.png" type="Texture" id=134]
+[ext_resource path="res://sprites/opening/scn1/op_00048.png" type="Texture" id=135]
+[ext_resource path="res://sprites/opening/scn1/op_00047.png" type="Texture" id=136]
+[ext_resource path="res://sprites/opening/scn1/op_00046.png" type="Texture" id=137]
+[ext_resource path="res://sprites/opening/scn1/op_00045.png" type="Texture" id=138]
+[ext_resource path="res://sprites/opening/scn1/op_00044.png" type="Texture" id=139]
+[ext_resource path="res://sprites/opening/scn1/op_00043.png" type="Texture" id=140]
+[ext_resource path="res://sprites/opening/scn1/op_00042.png" type="Texture" id=141]
+[ext_resource path="res://sprites/opening/scn1/op_00041.png" type="Texture" id=142]
+[ext_resource path="res://sprites/opening/scn1/op_00040.png" type="Texture" id=143]
+[ext_resource path="res://fonts/benguiatstd_big.fnt" type="BitmapFont" id=144]
+[ext_resource path="res://fonts/benguiatstd_med.fnt" type="BitmapFont" id=145]
+[ext_resource path="res://sprites/nier-automata-badge-01-ps4-eu-08dec15.png" type="Texture" id=146]
+[ext_resource path="res://sprites/opening/scn5/op_00599.png" type="Texture" id=147]
+[ext_resource path="res://sound/bgm/Rebirth_&_Hope.ogg" type="AudioStream" id=148]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ], "loop":false, "name":"tscn3", "speed":30.0 } ]
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ { "frames":[ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ) ], "loop":false, "name":"tscn4", "speed":30.0 } ]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ { "frames":[ ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ) ], "loop":false, "name":"reverse_godot", "speed":40.0 }, { "frames":[ ExtResource( 143 ), ExtResource( 142 ), ExtResource( 141 ), ExtResource( 140 ), ExtResource( 139 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 136 ), ExtResource( 135 ), ExtResource( 134 ), ExtResource( 133 ), ExtResource( 132 ), ExtResource( 131 ), ExtResource( 130 ), ExtResource( 129 ), ExtResource( 128 ), ExtResource( 127 ), ExtResource( 126 ) ], "loop":false, "name":"godot_eyes", "speed":30.0 } ]
+
+[sub_resource type="Animation" id=4]
+
+length = 5.0
+loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("tscn1/text:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 1.5, 3, 3.51, 3.72 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":0, "values":[ 0.0, 1.0, 1.0, 0.0 ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("tscn1/sprite1:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 1, 4.16, 4.39 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":0, "values":[ 0.0, 1.0, 1.0, 0.0 ] }
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 1.1, 3.88, 4.9 ), "transitions":FloatArray( 1, 1, 1 ), "values":[ { "args":[  ], "method":"play_tscn1" }, { "args":[  ], "method":"reverse_tscn1" }, { "args":[  ], "method":"tscn2_first" } ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("anim:playback/speed")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.6 ] }
+
+[sub_resource type="Animation" id=5]
+
+length = 4.0
+loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("anim:playback/speed")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.4 ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("tscn2/sprite:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0.68, 1.51, 2.55, 3.25 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":0, "values":[ 0.0, 1.0, 1.0, 0.0 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("tscn2/sprite:transform/scale")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0.37, 1.59 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 2.1, 2.1 ) ] }
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 1.81, 3.96 ), "transitions":FloatArray( 1, 1 ), "values":[ { "args":[  ], "method":"tscn2_second" }, { "args":[  ], "method":"tscn3_play" } ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("tscn2/text1:visibility/opacity")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 2.3, 3.01 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 1.0, 0.0 ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("tscn2/text2:visibility/opacity")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 2.86, 3.45 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 1.0, 0.0 ] }
+
+[sub_resource type="Animation" id=6]
+
+resource/name = "main5"
+length = 4.5
+loop = false
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("anim:playback/speed")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.37 ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("tscn5/sprite:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0.33, 2.26, 2.87, 3.2 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":0, "values":[ 0.0, 1.0, 1.0, 0.0 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("tscn5/sprite:transform/scale")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0.18, 2.26 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.9, 0.9 ), Vector2( 1.25, 1.25 ) ] }
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 4.39 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"to_start_menu" } ] }
+
+[node name="world" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="tscn3" type="Node2D" parent="CanvasLayer"]
+
+editor/display_folded = true
+transform/pos = Vector2( 600, 360 )
+
+[node name="sprite" type="AnimatedSprite" parent="CanvasLayer/tscn3"]
+
+transform/scale = Vector2( 0.9, 0.9 )
+z/z = 1
+frames = SubResource( 1 )
+animation = "tscn3"
+
+[node name="bg" type="Sprite" parent="CanvasLayer"]
+
+transform/pos = Vector2( 604.531, 352.444 )
+transform/scale = Vector2( 36.2616, 23.0393 )
+texture = ExtResource( 22 )
+__meta__ = { "_edit_lock_":true }
+
+[node name="tscn4" type="Node2D" parent="CanvasLayer"]
+
+editor/display_folded = true
+transform/pos = Vector2( 600, 360 )
+
+[node name="sprite" type="AnimatedSprite" parent="CanvasLayer/tscn4"]
+
+visibility/visible = false
+transform/scale = Vector2( 0.9, 0.9 )
+frames = SubResource( 2 )
+animation = "tscn4"
+
+[node name="tscn1" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="sprite1" type="AnimatedSprite" parent="tscn1"]
+
+visibility/opacity = 0.0
+transform/pos = Vector2( 600, 347.067 )
+transform/scale = Vector2( 1.5, 1.5 )
+frames = SubResource( 3 )
+animation = "godot_eyes"
+
+[node name="text" type="Label" parent="tscn1"]
+
+visibility/opacity = 0.0
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+rect/scale = Vector2( 1.25, 1.25 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 185.0
+margin/top = -554.0
+margin/right = -1015.0
+margin/bottom = -693.0
+custom_fonts/font = ExtResource( 144 )
+custom_colors/font_color = Color( 0.133333, 0.52549, 0.733333, 1 )
+custom_constants/line_spacing = 50
+text = "GODOT ENGINE"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="tscn2" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="text1" type="Label" parent="tscn2"]
+
+visibility/visible = false
+visibility/self_opacity = 0.9
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+rect/scale = Vector2( 1.25, 1.25 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 185.0
+margin/top = -166.0
+margin/right = -1015.0
+margin/bottom = -305.0
+custom_fonts/font = ExtResource( 144 )
+custom_colors/font_color = Color( 0.902344, 0.902344, 0.902344, 1 )
+custom_constants/line_spacing = 50
+text = "Based On"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text2" type="Label" parent="tscn2"]
+
+visibility/visible = false
+visibility/self_opacity = 0.9
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -82.0
+margin/top = -401.0
+margin/right = -1282.0
+margin/bottom = -540.0
+custom_fonts/font = ExtResource( 145 )
+custom_colors/font_color = Color( 0.902344, 0.902344, 0.902344, 1 )
+custom_constants/line_spacing = 50
+text = "Hacking Gameplay"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="sprite" type="Sprite" parent="tscn2"]
+
+visibility/opacity = 0.0
+transform/pos = Vector2( 600, 344.911 )
+texture = ExtResource( 146 )
+
+[node name="tscn5" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="sprite" type="Sprite" parent="tscn5"]
+
+visibility/opacity = 0.0
+transform/pos = Vector2( 600, 344.911 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 147 )
+
+[node name="music_player" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 148 )
+stream/play = false
+stream/loop = false
+stream/volume_db = 7.0
+stream/autoplay = false
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
+
+[node name="camera" type="Camera2D" parent="."]
+
+transform/pos = Vector2( 600, 360 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1.53, 1.53 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = true
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="anim" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/main1 = SubResource( 4 )
+anims/main2 = SubResource( 5 )
+anims/main5 = SubResource( 6 )
+playback/active = true
+playback/speed = 0.37
+blend_times = [  ]
+autoplay = "main1"
+
+

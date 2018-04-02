@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://scripts/spawner.gd" type="Script" id=1]
+
+[node name="spawner_B" type="Position2D"]
+
+script/script = ExtResource( 1 )
+object_tscn_up = null
+object_tscn_down = null
+object_tscn_left = null
+object_tscn_right = null
+
+

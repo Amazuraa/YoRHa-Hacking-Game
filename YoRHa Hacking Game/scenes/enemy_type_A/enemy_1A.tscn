@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=1]
+
+[ext_resource path="res://scripts/enemy_type_A.gd" type="Script" id=1]
+[ext_resource path="res://scenes/enemy_bullet_type1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/sfx/sfx_enemy_explode.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/sfx/sfx_enemy_shoot.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sprites/enemy1_new.png" type="Texture" id=5]
+[ext_resource path="res://sprites/enemy1_hit_new.png" type="Texture" id=6]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 45.0
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ { "frames":[ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 5 ) ], "loop":false, "name":"hit", "speed":20.0 } ]
+
+[node name="enemy_1A" type="KinematicBody2D"]
+
+z/z = 1
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+MOTION_SPEED = 60
+bullet_tscn = ExtResource( 2 )
+delay = 1.0
+total_health = 5
+sfx_tscn_e = ExtResource( 3 )
+sfx_tscn_s = ExtResource( 4 )
+
+[node name="sprite" type="AnimatedSprite" parent="."]
+
+frames = SubResource( 2 )
+animation = "hit"
+
+[node name="collision" type="CollisionShape2D" parent="."]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="muzzle" type="Position2D" parent="."]
+
+transform/pos = Vector2( 0, -100 )
+
+[node name="bullet_container" type="Node" parent="."]
+
+[node name="sfx_container" type="Node" parent="."]
+
+[node name="notifier" type="VisibilityNotifier2D" parent="."]
+
+rect = Rect2( -10, -10, 20, 20 )
+
+[connection signal="enter_screen" from="notifier" to="." method="_on_notifier_enter_screen"]
+
+[connection signal="exit_screen" from="notifier" to="." method="_on_notifier_exit_screen"]
+
+

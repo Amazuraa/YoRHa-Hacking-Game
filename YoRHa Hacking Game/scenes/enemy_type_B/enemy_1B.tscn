@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://scripts/enemy_type_1B.gd" type="Script" id=1]
+[ext_resource path="res://scenes/enemy_bullet_type1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/enemy_type_1.png" type="Texture" id=3]
+[ext_resource path="res://sprites/player.png" type="Texture" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 45.0
+
+[node name="enemy_1B" type="KinematicBody2D"]
+
+z/z = 1
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+MOTION_SPEED = 70
+bullet_tscn = ExtResource( 2 )
+delay = 0.2
+total_health = 20
+shielding_speed = 300.0
+
+[node name="sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 3 )
+offset = Vector2( 0, -5 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="muzzle" type="Position2D" parent="."]
+
+transform/pos = Vector2( 0, -150 )
+
+[node name="bullet_container" type="Node" parent="."]
+
+[node name="shield1" type="Sprite" parent="."]
+
+transform/pos = Vector2( -70, 0 )
+transform/scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 4 )
+
+[node name="shield2" type="Sprite" parent="."]
+
+transform/pos = Vector2( -70, 0 )
+transform/scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 4 )
+
+
