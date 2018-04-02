@@ -23,3 +23,7 @@ using bgm and sound effect from the game.
 &nbsp;&nbsp; * Illustrator<br/>
 &nbsp;&nbsp; * After Effect<br/>
 &nbsp;&nbsp; * Edit sound with Audacity<br/>
+
+### Download(.exe):
+
+https://drive.google.com/open?id=1z6KnOz7SuPIwZlb6FEUb2zbLcljkh-6u
